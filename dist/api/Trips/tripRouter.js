@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TripRouter = void 0;
+var express_1 = __importDefault(require("express"));
+var tripController_1 = require("./tripController");
+var utils_1 = require("../../utils");
+var middleware_1 = require("../../middleware");
+var tripValidator_1 = require("./tripValidator");
+var middleware_2 = require("../../middleware");
+var router = express_1.default.Router();
+var call = utils_1.controlHandler;
+var control = new tripController_1.TripController();
+router.post('/', middleware_2.authorize, (0, middleware_1.validation)(tripValidator_1.TripValidationSchema), call(control.createTrip, function (req, res) { return [req.body, req.user]; }));
+router.get('/search', (0, middleware_1.validation)(tripValidator_1.TripSearch), call(control.searchTrip, function (req, res) { return [req.query, req.body]; }));
+router.put('/:id', middleware_2.authorize, (0, middleware_1.validation)(tripValidator_1.TripUpdateSchema), call(control.updateTrip, function (req, res) { return [req.params.id, req.body, req.user]; }));
+router.put('/day/:id', middleware_2.authorize, call(control.updateDay, function (req, res) { return [req.params.id, req.body, req.user]; }));
+router.delete('/:id', middleware_2.authorize, call(control.deleteDays, function (req, res) { return [req.params.id, req.user]; }));
+router.get('/', call(control.getTrip, function (req, res) { return []; }));
+exports.TripRouter = router;

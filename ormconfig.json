@@ -1,0 +1,15 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "username": "root",
+  "port": 3306,
+  "password": "Okechukwuemordi27",
+  "database": "miracle",
+  "logging": false,
+  "synchronize": false,
+  "entities": ["**/api/**/*Model.ts"],
+  "migrations": ["src/migration/*.ts"],
+  "cli": {
+    "migrationsDir": "src/migration"
+  }
+}
