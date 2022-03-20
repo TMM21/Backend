@@ -33,7 +33,7 @@ var Payments = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        (0, typeorm_plus_1.PrimaryGeneratedColumn)("uuid"),
+        (0, typeorm_plus_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], Payments.prototype, "id", void 0);
     __decorate([
@@ -65,7 +65,7 @@ var Payments = /** @class */ (function (_super) {
         __metadata("design:type", Date)
     ], Payments.prototype, "createdAt", void 0);
     Payments = __decorate([
-        (0, typeorm_plus_1.Entity)({ orderBy: { createdAt: "DESC" } })
+        (0, typeorm_plus_1.Entity)({ orderBy: { createdAt: 'DESC' } })
     ], Payments);
     return Payments;
 }(typeorm_plus_1.BaseEntity));

@@ -9,8 +9,8 @@ const States = new StateController()
 
 router.post(
   '/',
-  authorize,
-  call(States.createState, (req, res) => [req.body, req.user]),
+
+  call(States.createState, (req, res) => [req.body]),
 )
 router.get(
   '/',

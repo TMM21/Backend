@@ -52,6 +52,7 @@ export interface GetBookingWithVehicle {
   vehicle: string
   service: string
   type: string
+  DepartureTerminal:string
 }
 export interface updateBooking {
   travelDate: string

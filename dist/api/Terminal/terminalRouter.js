@@ -13,7 +13,7 @@ var router = express_1.default.Router();
 var call = utils_1.controlHandler;
 router.use((0, middleware_1.validation)(terminalValidator_1.terminalValidationSchema));
 var terminal = new terminalController_1.TerminalController();
-router.post('/', call(terminal.createTerminal, function (req, res) { return [req.body, req.user]; }));
+router.post('/', middleware_1.authorize, call(terminal.createTerminal, function (req, res) { return [req.body, req.user]; }));
 router.delete('/delete/:id', middleware_1.authorize, call(terminal.deleteTerminal, function (req, res) { return [req.params.id, req.user]; }));
 router.get('/', call(terminal.getTerminal, function (req, res) { return []; }));
 exports.TerminalRouter = router;

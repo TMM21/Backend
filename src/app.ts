@@ -185,3 +185,10 @@ export default app
 //   }
 
 // }
+
+// MYSQL_ADDON_HOST=brqmm8vkexfo1wjzmitu-mysql.services.clever-cloud.com
+// MYSQL_ADDON_DB=brqmm8vkexfo1wjzmitu
+// MYSQL_ADDON_USER=ua0gehhrcl7ahtad
+// MYSQL_ADDON_PORT=3306
+// MYSQL_ADDON_PASSWORD=a0jmCQdOydx8vQF0jC6p
+// MYSQL_ADDON_URI=mysql://ua0gehhrcl7ahtad:a0jmCQdOydx8vQF0jC6p@brqmm8vkexfo1wjzmitu-mysql.services.clever-cloud.com:3306/brqmm8vkexfo1wjzmitu

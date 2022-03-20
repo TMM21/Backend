@@ -157,6 +157,7 @@ export class AuthService {
 
     const user = Users.create(addUser)
     user.Terminal = terminal.id
+    user.TerminalName = terminal.name
     user.priviledge = priviledge
 
     let priv = [priviledge]
@@ -184,6 +185,7 @@ export class AuthService {
         'priviledge',
         'Terminal',
         'priviledges',
+        'TerminalName',
       ],
       relations: ['roles', 'priviledge'],
     })

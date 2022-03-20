@@ -1,18 +1,17 @@
-import {VehicleStatus} from '../../enums'
+import { VehicleStatus } from '../../enums'
 export interface AddVehicle {
-    plateNumber:string
-    chasisNumber:string
-    typeId:string
-    PC:string
-    HC:string
-    PCNextOfKin:string,
-     PCNextOfKinPhoneNumber:string 
-     location:string
-
+  plateNumber: string
+  chasisNumber: string
+  typeId: string
+  PC: string
+  HC: string
+  PCPhoneNumber: string
+  PCNextOfKin: string
+  PCNextOfKinPhoneNumber: string
+  location: string
 }
 
 export interface vehicleStatus {
-    vehicleStatus:VehicleStatus
-    id:string
-
+  vehicleStatus: VehicleStatus
+  id: string
 }

@@ -11,8 +11,7 @@ const terminal = new TerminalController()
 
 router.post(
   '/',
-  authorize,
-  call(terminal.createTerminal, (req, res) => [req.body, req.user]),
+  call(terminal.createTerminal, (req, res) => [req.body]),
 )
 router.delete(
   '/delete/:id',

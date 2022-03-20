@@ -10663,3 +10663,943 @@ TSError: ⨯ Unable to compile TypeScript:
 2022-03-06T13:39:32.274Z [info]: Database connection was succesful
 2022-03-06T13:41:33.044Z [info]: server is listening on 4000
 2022-03-06T13:41:45.920Z [info]: Database connection was succesful
+2022-03-06T20:18:54.932Z [info]: server is listening on 4000
+2022-03-06T20:19:03.533Z [info]: Database connection was succesful
+2022-03-06T20:19:55.831Z [info]: server is listening on 4000
+2022-03-06T20:20:03.677Z [info]: Database connection was succesful
+2022-03-06T20:21:38.944Z [info]: server is listening on 4000
+2022-03-06T20:21:44.476Z [info]: Database connection was succesful
+2022-03-06T20:43:07.088Z [info]: server is listening on 4000
+2022-03-06T20:43:14.434Z [info]: Database connection was succesful
+2022-03-06T20:43:46.377Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/Terminal/terminalController.ts[0m:[93m11[0m:[93m72[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 2.
+
+[7m11[0m         const data =  await this.Services.createTerminal(terminalData, user)
+[7m  [0m [91m                                                                       ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/Terminal/terminalController.ts[0m:[93m11[0m:[93m72[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 2.
+
+[7m11[0m         const data =  await this.Services.createTerminal(terminalData, user)
+[7m  [0m [91m                                                                       ~~~~[0m
+
+    at createTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:840:12)
+    at reportTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:844:19)
+    at getOutput (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1034:36)
+    at Object.compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1342:43)
+    at Module.m._compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1474:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1478:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-03-06T20:46:32.276Z [info]: server is listening on 4000
+2022-03-06T20:46:38.719Z [info]: Database connection was succesful
+2022-03-06T20:50:16.224Z [info]: server is listening on 4000
+2022-03-06T20:50:23.538Z [info]: Database connection was succesful
+2022-03-06T20:56:04.930Z [error]: 400 - invalid terminal - /auth/signup/user - POST - ::1 - Stack: Error: invalid terminal
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:122:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-07T06:26:46.216Z [info]: server is listening on 4000
+2022-03-07T06:27:03.617Z [info]: Database connection was succesful
+2022-03-07T06:28:14.421Z [error]: 404 - UnAuthorized - /bookings/status - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1080:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:19:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:15:12)
+    at BookingService.updataBookingStatus (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1075:73)
+    at BookingControler.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingController.ts:46:43)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingController.ts:48:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingController.ts:29:53)
+2022-03-07T06:28:45.257Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1091:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-07T15:11:39.100Z [info]: server is listening on 4000
+2022-03-07T15:11:59.306Z [info]: Database connection was succesful
+2022-03-07T19:31:51.022Z [info]: server is listening on 4000
+2022-03-07T19:32:03.201Z [info]: Database connection was succesful
+2022-03-07T19:38:41.839Z [error]: 400 - no user with this credential exists  - /auth/loginUsers - POST - 127.0.0.1 - Stack: Error: no user with this credential exists 
+    at AuthService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:191:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T18:29:49.475Z [info]: server is listening on 4000
+2022-03-08T18:29:56.950Z [info]: Database connection was succesful
+2022-03-08T18:56:07.059Z [info]: server is listening on 4000
+2022-03-08T18:56:13.418Z [info]: Database connection was succesful
+2022-03-08T18:57:10.444Z [info]: server is listening on 4000
+2022-03-08T18:57:14.630Z [info]: Database connection was succesful
+2022-03-08T19:04:22.826Z [info]: server is listening on 4000
+2022-03-08T19:04:30.764Z [info]: Database connection was succesful
+2022-03-08T19:38:28.532Z [error]: An unexpected error occurred please restart the application!
+2022-03-08T19:41:15.236Z [info]: server is listening on 4000
+2022-03-08T19:41:21.929Z [info]: Database connection was succesful
+2022-03-08T19:41:28.668Z [error]: An unexpected error occurred please restart the application!
+2022-03-08T19:42:34.451Z [info]: server is listening on 4000
+2022-03-08T19:42:38.988Z [info]: Database connection was succesful
+2022-03-08T19:42:42.701Z [error]: An unexpected error occurred please restart the application!
+2022-03-08T19:44:27.010Z [info]: server is listening on 4000
+2022-03-08T19:44:32.693Z [info]: Database connection was succesful
+2022-03-08T19:44:40.078Z [error]: An unexpected error occurred please restart the application!
+2022-03-08T19:46:08.826Z [info]: server is listening on 4000
+2022-03-08T19:46:14.463Z [info]: Database connection was succesful
+2022-03-08T19:47:02.585Z [info]: server is listening on 4000
+2022-03-08T19:47:06.787Z [info]: Database connection was succesful
+2022-03-08T19:47:10.758Z [error]: An unexpected error occurred please restart the application!
+2022-03-08T19:47:33.732Z [info]: server is listening on 4000
+2022-03-08T19:47:38.186Z [info]: Database connection was succesful
+2022-03-08T19:47:57.309Z [info]: server is listening on 4000
+2022-03-08T19:48:01.865Z [info]: Database connection was succesful
+2022-03-08T19:48:26.375Z [info]: server is listening on 4000
+2022-03-08T19:48:30.817Z [info]: Database connection was succesful
+2022-03-08T19:49:06.231Z [info]: server is listening on 4000
+2022-03-08T19:49:11.055Z [info]: Database connection was succesful
+2022-03-08T19:51:34.835Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/vehicleLocation/vehicleService.ts[0m:[93m25[0m:[93m18[0m - [91merror[0m[90m TS2339: [0mProperty 'HC' does not exist on type 'VehicleLocation'.
+
+[7m25[0m         location.HC=vehicle.HC
+[7m  [0m [91m                 ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/vehicleLocation/vehicleService.ts[0m:[93m25[0m:[93m18[0m - [91merror[0m[90m TS2339: [0mProperty 'HC' does not exist on type 'VehicleLocation'.
+
+[7m25[0m         location.HC=vehicle.HC
+[7m  [0m [91m                 ~~[0m
+
+    at createTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:840:12)
+    at reportTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:844:19)
+    at getOutput (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1034:36)
+    at Object.compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1342:43)
+    at Module.m._compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1474:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1478:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-03-08T19:51:50.661Z [info]: server is listening on 4000
+2022-03-08T19:51:56.076Z [info]: Database connection was succesful
+2022-03-08T19:53:01.043Z [info]: server is listening on 4000
+2022-03-08T19:53:05.646Z [info]: Database connection was succesful
+2022-03-08T19:53:16.904Z [info]: server is listening on 4000
+2022-03-08T19:53:21.208Z [info]: Database connection was succesful
+2022-03-08T19:53:50.186Z [info]: server is listening on 4000
+2022-03-08T19:53:54.638Z [info]: Database connection was succesful
+2022-03-08T19:54:56.321Z [info]: server is listening on 4000
+2022-03-08T19:55:01.068Z [info]: Database connection was succesful
+2022-03-08T19:55:11.947Z [info]: server is listening on 4000
+2022-03-08T19:55:17.440Z [info]: Database connection was succesful
+2022-03-08T19:58:05.311Z [info]: server is listening on 4000
+2022-03-08T19:58:10.722Z [info]: Database connection was succesful
+2022-03-08T19:59:35.923Z [info]: server is listening on 4000
+2022-03-08T19:59:41.398Z [info]: Database connection was succesful
+2022-03-08T20:00:00.537Z [info]: server is listening on 4000
+2022-03-08T20:00:07.852Z [info]: server is listening on 4000
+2022-03-08T20:00:12.509Z [info]: Database connection was succesful
+2022-03-08T20:21:39.111Z [error]: 400 - QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654' - /bookings/vehicleStatus - PUT - 127.0.0.1 - Stack: Error: QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654'
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1143:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:17:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T20:22:40.254Z [error]: 400 - QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654' - /bookings/vehicleStatus - PUT - 127.0.0.1 - Stack: Error: QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654'
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1143:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:17:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T20:24:51.434Z [error]: 400 - Error: invalid route selected - /bookings/vehicleStatus - PUT - 127.0.0.1 - Stack: Error: Error: invalid route selected
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1143:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:17:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T20:26:57.215Z [error]: 400 - QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654' - /bookings/vehicleStatus - PUT - 127.0.0.1 - Stack: Error: QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654'
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1143:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:17:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T20:33:21.323Z [info]: server is listening on 4000
+2022-03-08T20:33:29.066Z [info]: Database connection was succesful
+2022-03-08T20:47:58.566Z [info]: server is listening on 4000
+2022-03-08T20:48:06.962Z [info]: Database connection was succesful
+2022-03-08T20:52:46.230Z [info]: server is listening on 4000
+2022-03-08T20:52:56.477Z [info]: Database connection was succesful
+2022-03-08T20:53:13.644Z [error]: 400 - QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654' - /bookings/vehicleStatus - PUT - 127.0.0.1 - Stack: Error: QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654'
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1143:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:17:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T20:53:57.933Z [info]: server is listening on 4000
+2022-03-08T20:54:08.905Z [info]: Database connection was succesful
+2022-03-08T20:54:31.152Z [error]: 400 - QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654' - /bookings/vehicleStatus - PUT - 127.0.0.1 - Stack: Error: QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654'
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1143:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:17:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T20:55:21.310Z [info]: server is listening on 4000
+2022-03-08T20:55:29.368Z [info]: Database connection was succesful
+2022-03-08T20:55:49.166Z [error]: 400 - QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654' - /bookings/vehicleStatus - PUT - 127.0.0.1 - Stack: Error: QueryFailedError: Duplicate entry 'dcfe2ee9-9982-4549-9c2e-a809c034ad87' for key 'vehicle_location.REL_ebf9aad6ec44bd4af760031654'
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1143:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:17:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T20:56:32.991Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/vehicleLocation/locationModel.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS6133: [0m'JoinColumn' is declared but its value is never read.
+
+[7m6[0m   JoinColumn,
+[7m [0m [91m  ~~~~~~~~~~[0m
+[96msrc/api/vehicleLocation/locationModel.ts[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS6133: [0m'OneToOne' is declared but its value is never read.
+
+[7m7[0m   OneToOne,
+[7m [0m [91m  ~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/vehicleLocation/locationModel.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS6133: [0m'JoinColumn' is declared but its value is never read.
+
+[7m6[0m   JoinColumn,
+[7m [0m [91m  ~~~~~~~~~~[0m
+[96msrc/api/vehicleLocation/locationModel.ts[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS6133: [0m'OneToOne' is declared but its value is never read.
+
+[7m7[0m   OneToOne,
+[7m [0m [91m  ~~~~~~~~[0m
+
+    at createTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:840:12)
+    at reportTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:844:19)
+    at getOutput (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1034:36)
+    at Object.compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1342:43)
+    at Module.m._compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1474:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1478:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-03-08T20:56:59.015Z [info]: server is listening on 4000
+2022-03-08T20:57:06.851Z [info]: Database connection was succesful
+2022-03-08T21:15:23.248Z [info]: server is listening on 4000
+2022-03-08T21:15:36.696Z [info]: Database connection was succesful
+2022-03-08T22:20:28.288Z [error]: 400 - invalid route selected - /bookings/transit - POST - 127.0.0.1 - Stack: Error: invalid route selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:966:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T22:23:46.451Z [error]: 400 - invalid route selected - /bookings/transit - POST - 127.0.0.1 - Stack: Error: invalid route selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:966:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T22:24:35.304Z [info]: server is listening on 4000
+2022-03-08T22:24:45.284Z [info]: Database connection was succesful
+2022-03-08T22:24:50.361Z [error]: 400 - invalid route selected - /bookings/transit - POST - 127.0.0.1 - Stack: Error: invalid route selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:967:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T22:26:42.033Z [info]: server is listening on 4000
+2022-03-08T22:26:53.267Z [info]: Database connection was succesful
+2022-03-08T22:26:56.411Z [error]: 400 - no booking has been done on this trip and on this day - /bookings/transit - POST - 127.0.0.1 - Stack: Error: no booking has been done on this trip and on this day
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:997:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T22:29:49.289Z [error]: 400 - no booking has been done on this trip and on this day - /bookings/transit - POST - 127.0.0.1 - Stack: Error: no booking has been done on this trip and on this day
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:997:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T22:32:54.706Z [info]: server is listening on 4000
+2022-03-08T22:33:07.135Z [info]: Database connection was succesful
+2022-03-08T22:33:32.749Z [error]: An unexpected error occurred please restart the application!
+2022-03-08T22:35:51.745Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/Booking/bookingService.ts[0m:[93m29[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'CapTainService' is declared but its value is never read.
+
+[7m29[0m import { CapTainService } from '../CaptainFee'
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/api/Booking/bookingService.ts[0m:[93m31[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'Terminals' is declared but its value is never read.
+
+[7m31[0m import { Terminals } from '../Terminal'
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/Booking/bookingService.ts[0m:[93m29[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'CapTainService' is declared but its value is never read.
+
+[7m29[0m import { CapTainService } from '../CaptainFee'
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/api/Booking/bookingService.ts[0m:[93m31[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'Terminals' is declared but its value is never read.
+
+[7m31[0m import { Terminals } from '../Terminal'
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:840:12)
+    at reportTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:844:19)
+    at getOutput (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1034:36)
+    at Object.compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1342:43)
+    at Module.m._compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1474:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1478:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-03-08T22:37:11.267Z [info]: server is listening on 4000
+2022-03-08T22:37:24.557Z [info]: Database connection was succesful
+2022-03-08T22:38:29.836Z [info]: server is listening on 4000
+2022-03-08T22:38:39.811Z [info]: Database connection was succesful
+2022-03-08T22:39:15.649Z [error]: An unexpected error occurred please restart the application!
+2022-03-08T22:41:02.103Z [info]: server is listening on 4000
+2022-03-08T22:41:10.510Z [info]: Database connection was succesful
+2022-03-08T22:42:50.635Z [info]: server is listening on 4000
+2022-03-08T22:42:58.566Z [info]: Database connection was succesful
+2022-03-08T22:44:17.738Z [info]: server is listening on 4000
+2022-03-08T22:44:23.553Z [info]: Database connection was succesful
+2022-03-08T22:46:43.207Z [info]: server is listening on 4000
+2022-03-08T22:46:56.461Z [info]: Database connection was succesful
+2022-03-08T22:47:16.070Z [error]: 400 - invalid vehicle selected - /bookings/transit - POST - 127.0.0.1 - Stack: Error: invalid vehicle selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1006:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T22:52:35.337Z [error]: 400 - invalid vehicle selected - /bookings/transit - POST - 127.0.0.1 - Stack: Error: invalid vehicle selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1006:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T23:01:50.998Z [error]: 400 - invalid route selected - /bookings/transit - POST - 127.0.0.1 - Stack: Error: invalid route selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:966:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-08T23:03:08.218Z [error]: 400 - invalid vehicle selected - /bookings/transit - POST - 127.0.0.1 - Stack: Error: invalid vehicle selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1006:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-09T14:25:37.324Z [info]: server is listening on 4000
+2022-03-09T14:25:58.513Z [info]: Database connection was succesful
+2022-03-10T10:01:25.630Z [info]: server is listening on 4000
+2022-03-10T10:01:44.392Z [info]: Database connection was succesful
+2022-03-10T10:47:18.256Z [error]: 401 - Unauthorized - /routes - GET - 127.0.0.1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:12:19
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:4:12)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:9:71
+    at allFailed (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:305:9)
+2022-03-10T10:48:24.744Z [error]: 401 - Unauthorized - /routes - GET - 127.0.0.1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:12:19
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:4:12)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:9:71
+    at allFailed (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:305:9)
+2022-03-10T10:49:18.444Z [error]: 401 - Unauthorized - /routes - GET - 127.0.0.1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:12:19
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:4:12)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:9:71
+    at allFailed (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:305:9)
+2022-03-10T10:49:46.634Z [error]: 401 - Unauthorized - /routes - GET - 127.0.0.1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:12:19
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:4:12)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:9:71
+    at allFailed (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:305:9)
+2022-03-10T10:50:04.835Z [error]: 401 - Unauthorized - /routes - GET - 127.0.0.1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:12:19
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:4:12)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:9:71
+    at allFailed (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:305:9)
+2022-03-10T10:51:03.857Z [error]: 401 - Unauthorized - /routes - GET - 127.0.0.1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:12:19
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:4:12)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:9:71
+    at allFailed (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:305:9)
+2022-03-10T11:02:27.796Z [info]: server is listening on 4000
+2022-03-10T11:02:47.003Z [info]: server is listening on 4000
+2022-03-10T11:02:56.583Z [info]: Database connection was succesful
+2022-03-10T19:20:00.628Z [info]: server is listening on 4000
+2022-03-10T19:20:40.673Z [info]: Database connection was succesful
+2022-03-10T19:24:11.924Z [error]: 400 - no user with this credential exists - /auth/loginUsers - POST - 127.0.0.1 - Stack: Error: no user with this credential exists
+    at AuthService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:198:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:5:58)
+2022-03-10T19:52:08.796Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/auth/authService.ts[0m:[93m160[0m:[93m10[0m - [91merror[0m[90m TS2339: [0mProperty 'TerminalName' does not exist on type 'Users'.
+
+[7m160[0m     user.TerminalName = terminal.name
+[7m   [0m [91m         ~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/auth/authService.ts[0m:[93m160[0m:[93m10[0m - [91merror[0m[90m TS2339: [0mProperty 'TerminalName' does not exist on type 'Users'.
+
+[7m160[0m     user.TerminalName = terminal.name
+[7m   [0m [91m         ~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:840:12)
+    at reportTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:844:19)
+    at getOutput (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1034:36)
+    at Object.compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1342:43)
+    at Module.m._compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1474:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1478:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-03-10T19:57:21.498Z [info]: server is listening on 4000
+2022-03-10T19:57:30.162Z [info]: Database connection was succesful
+2022-03-10T19:58:04.895Z [info]: server is listening on 4000
+2022-03-10T19:58:13.855Z [info]: Database connection was succesful
+2022-03-10T19:58:50.693Z [error]: 400 - invalid terminal - /auth/signup/user - POST - ::1 - Stack: Error: invalid terminal
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:122:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-10T20:03:05.749Z [info]:  Alright! Bye bye!
+2022-03-10T20:03:24.854Z [info]: server is listening on 4000
+2022-03-10T20:03:32.413Z [info]: Database connection was succesful
+2022-03-10T20:07:01.080Z [info]: server is listening on 4000
+2022-03-10T20:07:10.553Z [info]: Database connection was succesful
+2022-03-16T07:37:41.871Z [info]: server is listening on 4000
+2022-03-16T07:38:02.019Z [info]: Database connection was succesful
+2022-03-16T07:40:27.956Z [error]: 400 - no user with this credential exists  - /auth/loginUsers - POST - 127.0.0.1 - Stack: Error: no user with this credential exists 
+    at AuthService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:193:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-16T07:46:13.533Z [error]: 400 - no user with this credential exists  - /auth/loginUsers - POST - 127.0.0.1 - Stack: Error: no user with this credential exists 
+    at AuthService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:193:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-16T08:45:11.752Z [info]: server is listening on 4000
+2022-03-16T08:45:26.344Z [info]: Database connection was succesful
+2022-03-16T08:45:44.312Z [error]: 400 - Error: No Booking has been done on this route and Date - /bookings/search - GET - 127.0.0.1 - Stack: Error: Error: No Booking has been done on this route and Date
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1317:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-16T08:46:34.238Z [info]: server is listening on 4000
+2022-03-16T08:46:46.463Z [info]: Database connection was succesful
+2022-03-16T19:35:47.871Z [info]: server is listening on 4000
+2022-03-16T19:35:56.833Z [info]: Database connection was succesful
+2022-03-16T20:02:13.340Z [info]: server is listening on 4000
+2022-03-16T20:02:19.412Z [info]: Database connection was succesful
+2022-03-16T20:08:44.609Z [info]: server is listening on 4000
+2022-03-16T20:08:50.614Z [info]: Database connection was succesful
+2022-03-16T20:27:41.967Z [info]: server is listening on 4000
+2022-03-16T20:27:49.107Z [info]: Database connection was succesful
+2022-03-16T20:29:15.089Z [info]: server is listening on 4000
+2022-03-16T20:29:20.407Z [info]: Database connection was succesful
+2022-03-16T20:29:30.505Z [error]: 400 - route name already exists - /routes - POST - ::1 - Stack: Error: route name already exists
+    at RoutesService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:28:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-16T20:31:04.903Z [info]: server is listening on 4000
+2022-03-16T20:31:11.110Z [info]: Database connection was succesful
+2022-03-16T20:31:14.909Z [error]: 400 - departureTerminal and arrivalTerminal cannot be the same - /routes - POST - ::1 - Stack: Error: departureTerminal and arrivalTerminal cannot be the same
+    at RoutesService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:31:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-16T20:32:35.187Z [error]: 400 - departureTerminal and arrivalTerminal cannot be the same - /routes - POST - ::1 - Stack: Error: departureTerminal and arrivalTerminal cannot be the same
+    at RoutesService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:31:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-16T20:32:40.841Z [error]: 400 - departureTerminal and arrivalTerminal cannot be the same - /routes - POST - ::1 - Stack: Error: departureTerminal and arrivalTerminal cannot be the same
+    at RoutesService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:31:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-16T20:33:43.489Z [info]: server is listening on 4000
+2022-03-16T20:33:53.138Z [info]: server is listening on 4000
+2022-03-16T20:33:57.673Z [info]: Database connection was succesful
+2022-03-16T20:36:10.519Z [error]: 401 - Unauthorized - /trip - POST - ::1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:12:19
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:4:12)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:9:71
+    at allFailed (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at JwtStrategy.strategy.fail (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\node_modules\passport\lib\middleware\authenticate.js:305:9)
+2022-03-16T20:36:41.258Z [error]: 404 - UnAuthorized - /trip - POST - ::1 - Stack: Error: UnAuthorized
+    at TripService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:23:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:14:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:4:12)
+    at TripService.createTrip (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:16:60)
+    at TripController.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripController.ts:12:43)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripController.ts:48:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripController.ts:29:53)
+2022-03-17T06:08:25.183Z [info]: server is listening on 4000
+2022-03-17T06:08:39.721Z [info]: Database connection was succesful
+2022-03-17T08:33:09.927Z [info]: server is listening on 4000
+2022-03-17T08:33:19.372Z [info]: Database connection was succesful
+2022-03-17T09:31:11.465Z [error]: 400 - vehicle is already in transit or already assigned to a trip - /bookings - PUT - 127.0.0.1 - Stack: Error: vehicle is already in transit or already assigned to a trip
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:872:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-17T09:32:00.360Z [error]: 400 - vehicle is already in transit or already assigned to a trip - /bookings - PUT - 127.0.0.1 - Stack: Error: vehicle is already in transit or already assigned to a trip
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:872:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-17T09:35:25.476Z [info]: server is listening on 4000
+2022-03-17T09:35:38.746Z [info]: Database connection was succesful
+2022-03-17T19:12:49.914Z [info]: server is listening on 4000
+2022-03-17T19:12:58.643Z [info]: Database connection was succesful
+2022-03-17T19:18:44.042Z [error]: 404 - UnAuthorized - /terminals - POST - ::1 - Stack: Error: UnAuthorized
+    at TerminalService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Terminal\terminalService.ts:34:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Terminal\terminalService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Terminal\terminalService.ts:14:53)
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Terminal\terminalService.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Terminal\terminalService.ts:4:12)
+    at TerminalService.createTerminal (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Terminal\terminalService.ts:11:72)
+    at TerminalController.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Terminal\terminalController.ts:10:38)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Terminal\terminalController.ts:48:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Terminal\terminalController.ts:29:53)
+2022-03-17T19:25:40.901Z [error]: 400 - schedule already exists - /trip - POST - ::1 - Stack: Error: schedule already exists
+    at TripService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:47:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T10:07:50.745Z [info]: server is listening on 4000
+2022-03-18T10:07:52.832Z [error]: uncaughtException: unable to connect to database Error: Access denied for user 'ua0gehhrcl7ahtad'@'197.210.55.107' (using password: YES)
+Error: unable to connect to database Error: Access denied for user 'ua0gehhrcl7ahtad'@'197.210.55.107' (using password: YES)
+    at App.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\app.ts:113:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\app.ts:33:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\app.ts:14:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\app.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T10:11:15.953Z [info]: server is listening on 4000
+2022-03-18T10:11:29.528Z [info]: Database connection was succesful
+2022-03-18T10:25:55.372Z [error]: 400 - invalid arrival route name selected - /routes - POST - ::1 - Stack: Error: invalid arrival route name selected
+    at RoutesService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:16:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T10:28:24.530Z [error]: 400 - invalid arrival route name selected - /routes - POST - ::1 - Stack: Error: invalid arrival route name selected
+    at RoutesService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:16:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Routes\routesService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T10:30:20.597Z [error]: 401 - Unauthorized - /trip - POST - ::1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:20:23
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T10:30:45.648Z [error]: 400 - invalid vehicle type selected - /trip - POST - ::1 - Stack: Error: invalid vehicle type selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:33:15
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T10:39:07.173Z [error]: 400 - QueryFailedError: Duplicate entry '53d98fb3-476d-468c-9ae5-21af48c0a3e1' for key 'vehicles.REL_72d0f0ecfc71ee89771f3de60d' - /vehicle - POST - ::1 - Stack: Error: QueryFailedError: Duplicate entry '53d98fb3-476d-468c-9ae5-21af48c0a3e1' for key 'vehicles.REL_72d0f0ecfc71ee89771f3de60d'
+    at VehicleService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:45:18)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:33:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:14:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T18:34:18.810Z [info]: server is listening on 4000
+2022-03-18T18:34:38.235Z [info]: Database connection was succesful
+2022-03-18T18:36:16.959Z [info]: server is listening on 4000
+2022-03-18T18:36:26.697Z [info]: Database connection was succesful
+2022-03-18T18:39:25.472Z [error]: 400 - QueryFailedError: Duplicate entry '37a76b0b-0f85-4b6c-b69a-c593047bd6f2' for key 'vehicles.REL_72d0f0ecfc71ee89771f3de60d' - /vehicle - POST - ::1 - Stack: Error: QueryFailedError: Duplicate entry '37a76b0b-0f85-4b6c-b69a-c593047bd6f2' for key 'vehicles.REL_72d0f0ecfc71ee89771f3de60d'
+    at VehicleService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:45:18)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:33:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:14:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T18:40:19.319Z [info]: server is listening on 4000
+2022-03-18T18:40:27.840Z [info]: Database connection was succesful
+2022-03-18T18:45:11.155Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/vehicle/vehicleModel.ts[0m:[93m49[0m:[93m66[0m - [91merror[0m[90m TS2339: [0mProperty 'vehicle' does not exist on type 'VehicleType'.
+
+[7m49[0m   @ManyToOne((type) => VehicleType, (vehicleType) => vehicleType.vehicle)
+[7m  [0m [91m                                                                 ~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/vehicle/vehicleModel.ts[0m:[93m49[0m:[93m66[0m - [91merror[0m[90m TS2339: [0mProperty 'vehicle' does not exist on type 'VehicleType'.
+
+[7m49[0m   @ManyToOne((type) => VehicleType, (vehicleType) => vehicleType.vehicle)
+[7m  [0m [91m                                                                 ~~~~~~~[0m
+
+    at createTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:840:12)
+    at reportTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:844:19)
+    at getOutput (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1034:36)
+    at Object.compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1342:43)
+    at Module.m._compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1474:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1478:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-03-18T18:45:36.472Z [info]: server is listening on 4000
+2022-03-18T18:45:43.601Z [info]: Database connection was succesful
+2022-03-18T18:49:14.932Z [info]: server is listening on 4000
+2022-03-18T18:49:21.148Z [info]: Database connection was succesful
+2022-03-18T18:51:25.788Z [info]: server is listening on 4000
+2022-03-18T18:51:31.488Z [info]: Database connection was succesful
+2022-03-18T18:53:18.931Z [info]: server is listening on 4000
+2022-03-18T18:53:26.965Z [info]: Database connection was succesful
+2022-03-18T18:56:46.345Z [error]: 400 - Error: lga already exist - /lga - POST - ::1 - Stack: Error: Error: lga already exist
+    at LgaServices.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Lga\lgaServices.ts:28:8)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Lga\lgaServices.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Lga\lgaServices.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Lga\lgaServices.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T18:57:31.674Z [error]: 401 - Unauthorized - /terminals - POST - ::1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:20:23
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T18:59:18.919Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/Terminal/terminalController.ts[0m:[93m10[0m:[93m67[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 2.
+
+[7m10[0m     const data = await this.Services.createTerminal(terminalData, user)
+[7m  [0m [91m                                                                  ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/Terminal/terminalController.ts[0m:[93m10[0m:[93m67[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 2.
+
+[7m10[0m     const data = await this.Services.createTerminal(terminalData, user)
+[7m  [0m [91m                                                                  ~~~~[0m
+
+    at createTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:840:12)
+    at reportTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:844:19)
+    at getOutput (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1034:36)
+    at Object.compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1342:43)
+    at Module.m._compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1474:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1478:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-03-18T18:59:41.914Z [info]: server is listening on 4000
+2022-03-18T18:59:48.346Z [info]: Database connection was succesful
+2022-03-18T19:01:23.027Z [error]: 400 - invalid terminal - /auth/signup/user - POST - ::1 - Stack: Error: invalid terminal
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:122:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:01:40.786Z [error]: 400 - Invalid priviledge selected - /auth/signup/user - POST - ::1 - Stack: Error: Invalid priviledge selected
+    at AuthService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:155:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:03:01.491Z [error]: 400 - user not found - /auth/assign/5664ca11-81af-4433-9506-71f093bcc2a5 - POST - ::1 - Stack: Error: user not found
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:216:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:05:09.795Z [error]: 400 - QueryFailedError: Duplicate entry '5TDZA23C25CS352099' for key 'vehicles.IDX_bf694919e3c7689ffaa0d880b1' - /vehicle - POST - ::1 - Stack: Error: QueryFailedError: Duplicate entry '5TDZA23C25CS352099' for key 'vehicles.IDX_bf694919e3c7689ffaa0d880b1'
+    at VehicleService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:45:18)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:33:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:14:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:06:25.378Z [error]: 400 - QueryFailedError: Duplicate entry '5TDZA23C25CS35209' for key 'vehicles.IDX_bf694919e3c7689ffaa0d880b1' - /vehicle - POST - ::1 - Stack: Error: QueryFailedError: Duplicate entry '5TDZA23C25CS35209' for key 'vehicles.IDX_bf694919e3c7689ffaa0d880b1'
+    at VehicleService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:45:18)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:33:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:14:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:07:03.990Z [error]: 400 - Error: The PC TAIWO is already attributed to a vehicle - /vehicle - POST - ::1 - Stack: Error: Error: The PC TAIWO is already attributed to a vehicle
+    at VehicleService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:45:18)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:08:35.582Z [error]: 400 - QueryFailedError: Duplicate entry '5TDZA23C25CS352094' for key 'vehicles.IDX_bf694919e3c7689ffaa0d880b1' - /vehicle - POST - ::1 - Stack: Error: QueryFailedError: Duplicate entry '5TDZA23C25CS352094' for key 'vehicles.IDX_bf694919e3c7689ffaa0d880b1'
+    at VehicleService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:45:18)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:33:23)
+    at Object.throw (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:14:53)
+    at rejected (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\vehicle\vehicleService.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:13:27.455Z [error]: 401 - Unauthorized - /trip - POST - ::1 - Stack: Error: Unauthorized
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:20:23
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\middleware\CustomerAuthorization.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:13:48.050Z [error]: 400 - invalid vehicle type selected - /trip - POST - ::1 - Stack: Error: invalid vehicle type selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:33:15
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:16:04.025Z [error]: 400 - schedule already exists - /trip - POST - ::1 - Stack: Error: schedule already exists
+    at TripService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:47:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:5:58)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-18T19:34:41.986Z [info]: server is listening on 4000
+2022-03-19T09:51:43.199Z [info]: server is listening on 4000
+2022-03-19T09:52:08.103Z [info]: Database connection was succesful
+2022-03-19T10:00:06.963Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:00:19.311Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:01:22.762Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:02:03.354Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:02:18.205Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:02:48.440Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:03:30.563Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:03:33.890Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:03:38.836Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:03:54.729Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:04:12.927Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:04:49.807Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:05:14.434Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:05:21.198Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:09:24.820Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:10:05.262Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T10:31:39.677Z [info]: server is listening on 4000
+2022-03-19T10:31:49.935Z [info]: Database connection was succesful
+2022-03-19T11:13:02.262Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T11:13:24.851Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T11:15:30.077Z [error]: 400 - Invalid credential - /bookings/status - PUT - 127.0.0.1 - Stack: Error: Invalid credential
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1095:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T11:16:29.169Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:847:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T11:18:19.837Z [error]: 400 - invalid vehicle selected - /bookings/transit - POST - 127.0.0.1 - Stack: Error: invalid vehicle selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:1006:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:42:46.093Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:847:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:43:47.469Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:847:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:45:00.810Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:847:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:45:03.565Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:847:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:46:45.860Z [info]: server is listening on 4000
+2022-03-19T13:46:52.068Z [info]: Database connection was succesful
+2022-03-19T13:47:11.201Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:871:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:48:29.573Z [info]: server is listening on 4000
+2022-03-19T13:48:34.443Z [info]: Database connection was succesful
+2022-03-19T13:48:45.258Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:872:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:49:16.892Z [info]: server is listening on 4000
+2022-03-19T13:49:21.579Z [info]: Database connection was succesful
+2022-03-19T13:49:26.974Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:872:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:49:27.850Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:872:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:50:13.815Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:872:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:50:15.002Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:872:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:51:14.952Z [info]: server is listening on 4000
+2022-03-19T13:51:20.459Z [info]: Database connection was succesful
+2022-03-19T13:51:24.185Z [error]: 400 - vehicle is already in transit or already assigned to a trip - /bookings - PUT - 127.0.0.1 - Stack: Error: vehicle is already in transit or already assigned to a trip
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:897:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:51:32.141Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:872:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:51:51.162Z [error]: 404 - UnAuthorized - /bookings - PUT - 127.0.0.1 - Stack: Error: UnAuthorized
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:872:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:51:55.574Z [error]: 400 - vehicle is already in transit or already assigned to a trip - /bookings - PUT - 127.0.0.1 - Stack: Error: vehicle is already in transit or already assigned to a trip
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:897:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:51:56.448Z [error]: 400 - vehicle is already in transit or already assigned to a trip - /bookings - PUT - 127.0.0.1 - Stack: Error: vehicle is already in transit or already assigned to a trip
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:897:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T13:54:40.531Z [info]: server is listening on 4000
+2022-03-19T13:54:46.000Z [info]: Database connection was succesful
+2022-03-19T14:15:40.502Z [error]: 400 - vehicle is already in transit or already assigned to a trip - /bookings - PUT - 127.0.0.1 - Stack: Error: vehicle is already in transit or already assigned to a trip
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:898:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T14:15:41.974Z [error]: 400 - vehicle is already in transit or already assigned to a trip - /bookings - PUT - 127.0.0.1 - Stack: Error: vehicle is already in transit or already assigned to a trip
+    at BookingService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:898:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:44:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:25:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Booking\bookingService.ts:16:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-19T16:49:17.293Z [info]: server is listening on 4000
+2022-03-19T16:49:32.036Z [info]: Database connection was succesful
+2022-03-19T17:45:03.830Z [info]:  Alright! Bye bye!
+2022-03-19T17:45:26.825Z [info]: server is listening on 4000
+2022-03-19T17:45:37.028Z [info]: Database connection was succesful
+2022-03-20T08:38:05.436Z [info]: server is listening on 4000
+2022-03-20T08:38:25.606Z [info]: Database connection was succesful
+2022-03-20T08:41:54.936Z [error]: 400 - Invalid priviledge selected - /auth/signup/user - POST - ::1 - Stack: Error: Invalid priviledge selected
+    at AuthService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:155:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-20T08:42:24.895Z [error]: 400 - Invalid priviledge selected - /auth/signup/user - POST - ::1 - Stack: Error: Invalid priviledge selected
+    at AuthService.<anonymous> (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:155:13)
+    at step (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:33:23)
+    at Object.next (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:14:53)
+    at fulfilled (C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-20T08:43:04.011Z [info]: server is listening on 4000
+2022-03-20T08:43:26.854Z [info]: Database connection was succesful
+2022-03-20T08:44:53.077Z [error]: 400 - user not found - /auth/assign/44b264ee-a7db-41f0-bdeb-d5562ed1e28c - POST - ::1 - Stack: Error: user not found
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\auth\authService.ts:216:13
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-20T08:56:22.269Z [error]: 400 - invalid vehicle type selected - /trip - POST - ::1 - Stack: Error: invalid vehicle type selected
+    at C:\Users\themi\Dropbox\My PC (DESKTOP-S9BGUKQ)\Desktop\Backend-api)\src\api\Trips\tripService.ts:33:15
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+2022-03-20T09:03:46.634Z [error]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/vehicle/vehicleService.ts[0m:[93m15[0m:[93m19[0m - [91merror[0m[90m TS2339: [0mProperty 'PCPhoneNumber' does not exist on type 'AddVehicle'.
+
+[7m15[0m       vehicleData.PCPhoneNumber,
+[7m  [0m [91m                  ~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/vehicle/vehicleService.ts[0m:[93m15[0m:[93m19[0m - [91merror[0m[90m TS2339: [0mProperty 'PCPhoneNumber' does not exist on type 'AddVehicle'.
+
+[7m15[0m       vehicleData.PCPhoneNumber,
+[7m  [0m [91m                  ~~~~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:840:12)
+    at reportTSError (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:844:19)
+    at getOutput (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1034:36)
+    at Object.compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1342:43)
+    at Module.m._compile (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1474:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\themi\AppData\Roaming\npm\node_modules\ts-node\src\index.ts:1478:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2022-03-20T09:05:44.306Z [info]: server is listening on 4000

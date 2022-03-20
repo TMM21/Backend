@@ -59,29 +59,31 @@ var TripService = /** @class */ (function () {
                     case 0:
                         console.log(user);
                         if (user.block) {
-                            throw new utils_1.AppError("UnAuthorized");
+                            throw new utils_1.AppError('UnAuthorized');
                         }
-                        isValid = user.priviledges.includes("admin");
+                        isValid = user.priviledges.includes('admin');
                         if (!isValid) {
-                            throw new utils_1.AppError("UnAuthorized", null, 404);
+                            throw new utils_1.AppError('UnAuthorized', null, 404);
                         }
-                        return [4 /*yield*/, Routes_1.Routes.findOneOrFail({ id: tripData.routeId })
-                                .catch(function () {
-                                throw new utils_1.AppError("invalid route");
+                        return [4 /*yield*/, Routes_1.Routes.findOneOrFail({ id: tripData.routeId }).catch(function () {
+                                throw new utils_1.AppError('invalid route');
                             })];
                     case 1:
                         route = _b.sent();
-                        return [4 /*yield*/, vehicleType_1.VehicleType.findOneOrFail({ id: tripData.typeId })
-                                .catch(function () {
+                        return [4 /*yield*/, vehicleType_1.VehicleType.findOneOrFail({ id: tripData.typeId }).catch(function () {
                                 throw new utils_1.AppError('invalid vehicle type selected');
                             })];
                     case 2:
                         type = _b.sent();
                         console.log(route, type);
-                        return [4 /*yield*/, tripModel_1.Trips.findOne({ where: [{
+                        return [4 /*yield*/, tripModel_1.Trips.findOne({
+                                where: [
+                                    {
                                         schedule: tripData.schedule,
-                                        route: tripData.routeId
-                                    }] })];
+                                        route: tripData.routeId,
+                                    },
+                                ],
+                            })];
                     case 3:
                         trip = _b.sent();
                         if (trip) {
@@ -90,7 +92,7 @@ var TripService = /** @class */ (function () {
                         newTrip = tripModel_1.Trips.create(tripData);
                         seat = [];
                         for (i = 1; i <= type.seatNumber; i++) {
-                            seat.push({ seatNumber: i, });
+                            seat.push({ seatNumber: i });
                         }
                         _a = newTrip;
                         return [4 /*yield*/, seatModel_1.Seats.save(seat)];
@@ -110,9 +112,14 @@ var TripService = /** @class */ (function () {
                 switch (_b.label) {
                     case 0:
                         day = (0, dayjs_1.default)(tripData.travelDate).format('dddd').toLowerCase();
-                        return [4 /*yield*/, tripModel_1.Trips.find({ where: [{
-                                        route: tripData.routeId
-                                    }], relations: ['type', 'seat', 'route'] })];
+                        return [4 /*yield*/, tripModel_1.Trips.find({
+                                where: [
+                                    {
+                                        route: tripData.routeId,
+                                    },
+                                ],
+                                relations: ['type', 'seat', 'route'],
+                            })];
                     case 1:
                         trips = _b.sent();
                         if (!trips) {
@@ -132,12 +139,17 @@ var TripService = /** @class */ (function () {
                         _b.label = 3;
                     case 3:
                         _b.trys.push([3, 5, , 6]);
-                        return [4 /*yield*/, Booking_1.Bookings.find({ where: [{
+                        return [4 /*yield*/, Booking_1.Bookings.find({
+                                where: [
+                                    {
                                         trip: trip.id,
                                         ConfirmedTravelDate: tripData.travelDate,
-                                        service: "book_a_seat",
-                                        bookingStatus: (0, typeorm_plus_1.Not)(enums_1.BookingStatus.DELAY)
-                                    }], relations: ["passengerId"] })];
+                                        service: 'book_a_seat',
+                                        bookingStatus: (0, typeorm_plus_1.Not)(enums_1.BookingStatus.DELAY),
+                                    },
+                                ],
+                                relations: ['passengerId'],
+                            })];
                     case 4:
                         booking = _b.sent();
                         if (booking.length === 0) {
@@ -168,19 +180,18 @@ var TripService = /** @class */ (function () {
             var trip, updates, allowed, isAllowed;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, tripModel_1.Trips.findOneOrFail({ id: id })
-                            .catch(function () {
+                    case 0: return [4 /*yield*/, tripModel_1.Trips.findOneOrFail({ id: id }).catch(function () {
                             throw new utils_1.AppError('invalid trip selected');
                         })];
                     case 1:
                         trip = _a.sent();
                         updates = Object.keys(trips);
-                        allowed = ["price", 'schedule',];
+                        allowed = ['price', 'schedule'];
                         isAllowed = updates.every(function (item) { return allowed.includes(item); });
                         if (!isAllowed) {
                             throw new utils_1.AppError('invalid updates');
                         }
-                        updates.forEach(function (item) { return trip[item] = trips[item]; });
+                        updates.forEach(function (item) { return (trip[item] = trips[item]); });
                         return [4 /*yield*/, trip.save()];
                     case 2: return [2 /*return*/, _a.sent()];
                 }
@@ -192,13 +203,20 @@ var TripService = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         newDay = day.day.map(function (item) { return item.toLowerCase(); });
-                        AllowedUpdates = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+                        AllowedUpdates = [
+                            'monday',
+                            'tuesday',
+                            'wednesday',
+                            'thursday',
+                            'friday',
+                            'saturday',
+                            'sunday',
+                        ];
                         isAllowed = newDay.every(function (item) { return AllowedUpdates.includes(item); });
                         if (!isAllowed) {
                             throw new utils_1.AppError('invalid day selected');
                         }
-                        return [4 /*yield*/, tripModel_1.Trips.findOneOrFail({ id: id })
-                                .catch(function () {
+                        return [4 /*yield*/, tripModel_1.Trips.findOneOrFail({ id: id }).catch(function () {
                                 throw new utils_1.AppError('invalid trip selected');
                             })];
                     case 1:
@@ -213,7 +231,7 @@ var TripService = /** @class */ (function () {
                         return [4 /*yield*/, trip.save()];
                     case 2:
                         _a.sent();
-                        return [2 /*return*/, "updated"];
+                        return [2 /*return*/, 'updated'];
                 }
             });
         }); };
@@ -222,17 +240,25 @@ var TripService = /** @class */ (function () {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, tripModel_1.Trips.findOneOrFail({ where: [{
-                                    id: id
-                                }], relations: ["seat"] })
-                            .catch(function () {
+                    case 0: return [4 /*yield*/, tripModel_1.Trips.findOneOrFail({
+                            where: [
+                                {
+                                    id: id,
+                                },
+                            ],
+                            relations: ['seat'],
+                        }).catch(function () {
                             throw new utils_1.AppError('invalid trip selected');
                         })];
                     case 1:
                         trip = _a.sent();
-                        return [4 /*yield*/, seatModel_1.Seats.find({ where: [{
-                                        trip: trip.id
-                                    }] })];
+                        return [4 /*yield*/, seatModel_1.Seats.find({
+                                where: [
+                                    {
+                                        trip: trip.id,
+                                    },
+                                ],
+                            })];
                     case 2:
                         seat = _a.sent();
                         seat.forEach(function (item) { return __awaiter(_this, void 0, void 0, function () {
@@ -261,7 +287,7 @@ var TripService = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, tripModel_1.Trips.find({ where: [{}], relations: ["route"] })];
+                        return [4 /*yield*/, tripModel_1.Trips.find({ where: [{}], relations: ['route'] })];
                     case 1:
                         trip = _a.sent();
                         return [2 /*return*/, trip];

@@ -58,7 +58,7 @@ var Bookings = /** @class */ (function (_super) {
         __metadata("design:type", Passenger_1.Passengers)
     ], Bookings.prototype, "passengerId", void 0);
     __decorate([
-        (0, typeorm_plus_1.Column)({ type: "enum", enum: enums_1.paymentType }),
+        (0, typeorm_plus_1.Column)({ type: 'enum', enum: enums_1.paymentType }),
         __metadata("design:type", String)
     ], Bookings.prototype, "paymentType", void 0);
     __decorate([
@@ -71,7 +71,7 @@ var Bookings = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], Bookings.prototype, "type", void 0);
     __decorate([
-        (0, typeorm_plus_1.Column)({ type: "enum", enum: enums_1.BOOK }),
+        (0, typeorm_plus_1.Column)({ type: 'enum', enum: enums_1.BOOK }),
         __metadata("design:type", String)
     ], Bookings.prototype, "service", void 0);
     __decorate([
@@ -139,7 +139,11 @@ var Bookings = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], Bookings.prototype, "ReturnTripId", void 0);
     __decorate([
-        (0, typeorm_plus_1.Column)({ type: 'enum', enum: enums_1.BookingStatus, default: enums_1.BookingStatus.APPROVED }),
+        (0, typeorm_plus_1.Column)({
+            type: 'enum',
+            enum: enums_1.BookingStatus,
+            default: enums_1.BookingStatus.APPROVED,
+        }),
         __metadata("design:type", String)
     ], Bookings.prototype, "bookingStatus", void 0);
     __decorate([
@@ -151,7 +155,7 @@ var Bookings = /** @class */ (function (_super) {
         __metadata("design:type", Date)
     ], Bookings.prototype, "updatedAt", void 0);
     Bookings = __decorate([
-        (0, typeorm_plus_1.Entity)({ orderBy: { createdAt: "DESC" } })
+        (0, typeorm_plus_1.Entity)({ orderBy: { createdAt: 'DESC' } })
     ], Bookings);
     return Bookings;
 }(typeorm_plus_1.BaseEntity));

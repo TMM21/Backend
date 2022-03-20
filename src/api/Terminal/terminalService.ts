@@ -8,31 +8,27 @@ import { Routes } from '../Routes'
 import { Trips, Seats } from '../Trips'
 
 export class TerminalService {
-  public createTerminal = async (terminalData: AddTerminal, user: Users) => {
-    if (user.priviledges.includes('admin')) {
-      console.log('hello')
-      const lga = await LGA.findOneOrFail({ id: terminalData.lgaId }).catch(
-        () => {
-          throw new AppError('invalid lga selected')
-        },
-      )
-      const state = await States.findOneOrFail({
-        id: terminalData.stateId,
-      }).catch(() => {
-        throw new AppError('invalid state selected')
-      })
-      const tempTerminal = await Terminals.findOne({ name: terminalData.name })
-      if (tempTerminal) {
-        throw new AppError('terminal already exists')
-      }
-      const terminal = Terminals.create(terminalData)
-      terminal.state = state
-      terminal.lga = lga
-
-      return await terminal.save()
-    } else {
-      throw new AppError('UnAuthorized', null, 404)
+  public createTerminal = async (terminalData: AddTerminal) => {
+    console.log('hello')
+    const lga = await LGA.findOneOrFail({ id: terminalData.lgaId }).catch(
+      () => {
+        throw new AppError('invalid lga selected')
+      },
+    )
+    const state = await States.findOneOrFail({
+      id: terminalData.stateId,
+    }).catch(() => {
+      throw new AppError('invalid state selected')
+    })
+    const tempTerminal = await Terminals.findOne({ name: terminalData.name })
+    if (tempTerminal) {
+      throw new AppError('terminal already exists')
     }
+    const terminal = Terminals.create(terminalData)
+    terminal.state = state
+    terminal.lga = lga
+
+    return await terminal.save()
   }
   public deleteTerminal = async (id: string, user: Users) => {
     if (user.priviledges.includes('admin')) {

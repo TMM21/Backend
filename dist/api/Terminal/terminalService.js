@@ -52,15 +52,15 @@ var TerminalService = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         if (!user.priviledges.includes('admin')) return [3 /*break*/, 5];
-                        console.log("hello");
-                        return [4 /*yield*/, Lga_1.LGA.findOneOrFail({ id: terminalData.lgaId })
-                                .catch(function () {
-                                throw new utils_1.AppError("invalid lga selected");
+                        console.log('hello');
+                        return [4 /*yield*/, Lga_1.LGA.findOneOrFail({ id: terminalData.lgaId }).catch(function () {
+                                throw new utils_1.AppError('invalid lga selected');
                             })];
                     case 1:
                         lga = _a.sent();
-                        return [4 /*yield*/, State_1.States.findOneOrFail({ id: terminalData.stateId })
-                                .catch(function () {
+                        return [4 /*yield*/, State_1.States.findOneOrFail({
+                                id: terminalData.stateId,
+                            }).catch(function () {
                                 throw new utils_1.AppError('invalid state selected');
                             })];
                     case 2:
@@ -69,7 +69,7 @@ var TerminalService = /** @class */ (function () {
                     case 3:
                         tempTerminal = _a.sent();
                         if (tempTerminal) {
-                            throw new utils_1.AppError("terminal already exists");
+                            throw new utils_1.AppError('terminal already exists');
                         }
                         terminal = terminalModel_1.Terminals.create(terminalData);
                         terminal.state = state;
@@ -87,8 +87,7 @@ var TerminalService = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         if (!user.priviledges.includes('admin')) return [3 /*break*/, 4];
-                        return [4 /*yield*/, terminalModel_1.Terminals.findOneOrFail({ id: id })
-                                .catch(function () {
+                        return [4 /*yield*/, terminalModel_1.Terminals.findOneOrFail({ id: id }).catch(function () {
                                 throw new utils_1.AppError('invalid terminal selected');
                             })];
                     case 1:
@@ -145,7 +144,7 @@ var TerminalService = /** @class */ (function () {
                         return [4 /*yield*/, terminalModel_1.Terminals.getRepository().delete({ id: terminal.id })];
                     case 3:
                         _a.sent();
-                        return [2 /*return*/, "terminal deleted"];
+                        return [2 /*return*/, 'terminal deleted'];
                     case 4: return [2 /*return*/];
                 }
             });

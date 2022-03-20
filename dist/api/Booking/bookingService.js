@@ -66,12 +66,13 @@ var CaptainFee_1 = require("../CaptainFee");
 var Routes_1 = require("../Routes");
 var Terminal_1 = require("../Terminal");
 var vehicleLocation_1 = require("../vehicleLocation");
+var typeorm_plus_2 = require("typeorm-plus");
 var BookingService = /** @class */ (function () {
     function BookingService() {
         //customer booking
         var _this = this;
         this.BookATrip = function (bookingData, user) { return __awaiter(_this, void 0, void 0, function () {
-            var trip, date, available, payment, profile, bookingModels, _i, _a, passenger, bookingModel, passengers, month, day, hour, min, sec, milli, ref, bookings, trip, ReturnTrip, date, available, Return, isAvailable, payment, profile, bookingModels, _b, _c, roundTripPassenger, bookingModel, month, day, hour, min, sec, milli, refe, passenger, bookings, returnBookingModels, _d, _e, returnPasenger, bookingModel, month, day, hour, min, sec, milli, ref, passenger, returnBookings, trip, bookingModels, profile, _f, _g, passenger, bookingModel, passengers, booking, trip, ReturnTrip, date, available, Return, isAvailable, profile, bookingModels, _h, _j, passengers, bookingModel, passenger, booking, ReturnBookingModels, _k, _l, returnPassenger, ReturnBookingModel, returnPassengers, ReturnBooking;
+            var trip, date, available, payment, bookingModels, _i, _a, passenger, profile, bookingModel, passengers, month, day, hour, min, sec, milli, ref, bookings, trip, ReturnTrip, date, available, Return, isAvailable, payment, profile, bookingModels, _b, _c, roundTripPassenger, bookingModel, month, day, hour, min, sec, milli, refe, passenger, bookings, returnBookingModels, _d, _e, returnPasenger, bookingModel, month, day, hour, min, sec, milli, ref, passenger, returnBookings, trip, bookingModels, profile, _f, _g, passenger, bookingModel, passengers, booking, trip, ReturnTrip, date, available, Return, isAvailable, profile, bookingModels, _h, _j, passengers, bookingModel, passenger, booking, ReturnBookingModels, _k, _l, returnPassenger, ReturnBookingModel, returnPassengers, ReturnBooking;
             return __generator(this, function (_m) {
                 switch (_m.label) {
                     case 0:
@@ -80,10 +81,14 @@ var BookingService = /** @class */ (function () {
                         }
                         if (!(bookingData.service === 'book_a_seat')) return [3 /*break*/, 29];
                         if (!(bookingData.type === 'one_way')) return [3 /*break*/, 10];
-                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({ where: [{
-                                        id: bookingData.tripId
-                                    }], relations: ["route"] })
-                                .catch(function () {
+                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({
+                                where: [
+                                    {
+                                        id: bookingData.tripId,
+                                    },
+                                ],
+                                relations: ['route'],
+                            }).catch(function () {
                                 throw new utils_1.AppError('invalid trip selected');
                             })];
                     case 1:
@@ -100,15 +105,15 @@ var BookingService = /** @class */ (function () {
                         return [4 /*yield*/, this.verifyPayment(trip.price, bookingData.referenceId, bookingData.numberOfTravellers, user)];
                     case 3:
                         payment = _m.sent();
-                        return [4 /*yield*/, Profile_1.Profile.create(bookingData.profile).save()];
-                    case 4:
-                        profile = _m.sent();
                         bookingModels = [];
                         _i = 0, _a = bookingData.passenger;
-                        _m.label = 5;
-                    case 5:
+                        _m.label = 4;
+                    case 4:
                         if (!(_i < _a.length)) return [3 /*break*/, 8];
                         passenger = _a[_i];
+                        return [4 /*yield*/, Profile_1.Profile.create(bookingData.profile).save()];
+                    case 5:
+                        profile = _m.sent();
                         bookingModel = bookingModel_1.Bookings.create(bookingData);
                         passengers = Passenger_1.Passengers.create(passenger);
                         month = (0, dayjs_1.default)(new Date()).format('MMM').charAt(0).toUpperCase();
@@ -130,8 +135,8 @@ var BookingService = /** @class */ (function () {
                         bookingModel.DepartureTerminal = trip.route.Terminal;
                         bookingModel.ArrivalTerminal = trip.route.route;
                         bookingModel.payment = payment;
-                        bookingModel.paymentType = enums_1.paymentType.CARD,
-                            bookingModel.schedule = trip.schedule;
+                        (bookingModel.paymentType = enums_1.paymentType.CARD),
+                            (bookingModel.schedule = trip.schedule);
                         bookingModel.service = bookingData.service;
                         bookingModel.type = bookingData.type;
                         bookingModel.numberOfTravellers = 1;
@@ -144,7 +149,7 @@ var BookingService = /** @class */ (function () {
                         _m.label = 7;
                     case 7:
                         _i++;
-                        return [3 /*break*/, 5];
+                        return [3 /*break*/, 4];
                     case 8: return [4 /*yield*/, bookingModel_1.Bookings.save(bookingModels)];
                     case 9:
                         bookings = _m.sent();
@@ -156,17 +161,25 @@ var BookingService = /** @class */ (function () {
                             !bookingData.returnDate) {
                             throw new utils_1.AppError('incomplete Data');
                         }
-                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({ where: [{
-                                        id: bookingData.tripId
-                                    }], relations: ["route"] })
-                                .catch(function () {
+                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({
+                                where: [
+                                    {
+                                        id: bookingData.tripId,
+                                    },
+                                ],
+                                relations: ['route'],
+                            }).catch(function () {
                                 throw new utils_1.AppError('invalid trip selected');
                             })];
                     case 11:
                         trip = _m.sent();
-                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({ where: [{
+                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({
+                                where: [
+                                    {
                                         id: bookingData.returnTripId,
-                                    }], relations: ["route"]
+                                    },
+                                ],
+                                relations: ['route'],
                             }).catch(function () {
                                 throw new utils_1.AppError('invalid return trip');
                             })];
@@ -299,9 +312,13 @@ var BookingService = /** @class */ (function () {
                     case 29:
                         if (!(bookingData.service == 'hire_service')) return [3 /*break*/, 53];
                         if (!(bookingData.type == 'one_way')) return [3 /*break*/, 37];
-                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({ where: [{
-                                        id: bookingData.tripId
-                                    }], relations: ["route"]
+                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({
+                                where: [
+                                    {
+                                        id: bookingData.tripId,
+                                    },
+                                ],
+                                relations: ['route'],
                             }).catch(function () {
                                 throw new utils_1.AppError('invalid trip selected');
                             })];
@@ -328,8 +345,8 @@ var BookingService = /** @class */ (function () {
                         bookingModel.referenceId = bookingData.referenceId;
                         bookingModel.TravelDate = bookingData.travelDate;
                         bookingModel.schedule = trip.schedule;
-                        bookingModel.DepartureTerminal = trip.route.Terminal,
-                            bookingModel.ArrivalTerminal = trip.route.route;
+                        (bookingModel.DepartureTerminal = trip.route.Terminal),
+                            (bookingModel.ArrivalTerminal = trip.route.route);
                         bookingModel.amount = trip.price;
                         bookingModel.numberOfTravellers = 5;
                         bookingModel.ConfirmedTripId = trip.id;
@@ -348,17 +365,24 @@ var BookingService = /** @class */ (function () {
                     case 37:
                         if (!(bookingData.type == 'round_trip')) return [3 /*break*/, 51];
                         return [4 /*yield*/, Trips_1.Trips.findOneOrFail({
-                                where: [{
+                                where: [
+                                    {
                                         id: bookingData.tripId,
-                                    }], relations: ["route"]
+                                    },
+                                ],
+                                relations: ['route'],
                             }).catch(function () {
                                 throw new utils_1.AppError('invalid trip selected');
                             })];
                     case 38:
                         trip = _m.sent();
-                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({ where: [{
+                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({
+                                where: [
+                                    {
                                         id: bookingData.returnTripId,
-                                    }], relations: ["route"]
+                                    },
+                                ],
+                                relations: ['route'],
                             })];
                     case 39:
                         ReturnTrip = _m.sent();
@@ -395,9 +419,9 @@ var BookingService = /** @class */ (function () {
                         bookingModel.ReturnTripId = ReturnTrip.id;
                         bookingModel.ConfirmedReturnTripId = ReturnTrip.id;
                         bookingModel.amount = trip.price;
-                        bookingModel.DepartureTerminal = trip.route.Terminal,
-                            bookingModel.ArrivalTerminal = trip.route.route,
-                            bookingModel.TravelDate = bookingData.travelDate;
+                        (bookingModel.DepartureTerminal = trip.route.Terminal),
+                            (bookingModel.ArrivalTerminal = trip.route.route),
+                            (bookingModel.TravelDate = bookingData.travelDate);
                         bookingModel.ConfirmedTravelDate = bookingData.travelDate;
                         bookingModel.ReturnDate = bookingData.returnDate;
                         bookingModel.schedule = trip.schedule;
@@ -522,7 +546,7 @@ var BookingService = /** @class */ (function () {
             });
         }); };
         this.UserBooking = function (bookingData, user) { return __awaiter(_this, void 0, void 0, function () {
-            var Authorized, trip, payment, date, available, profile, payments, bookingModels, _i, _a, passenger, bookingModel, passengers, month, day, hour, min, sec, milli, ref, book, ReturnTrip, date, available, Return, isAvailable, amount, profile, payments, bookingModels, _b, _c, roundTrip, bookingModel, month, day, hour, min, sec, milli, ref, passenger, bookings, returnBookingModels, _d, _e, returnPasenger, bookingModel, month, day, hour, min, sec, milli, ref, passenger, returnBookings, bookingModels, profile, payments, _f, _g, passenger, month, day, hour, min, sec, milli, ref, bookingModel, passengers, booking, ReturnTrip, profile, bookingModels, payments, _h, _j, passengers, bookingModel, month, day, hour, min, sec, milli, ref, passenger, booking, ReturnBookingModels, _k, _l, returnPassenger, month, day, hour, min, sec, milli, ref, ReturnBookingModel, returnPassengers, returnBooking;
+            var Authorized, trip, payment, date, available, payments, bookingModels, _i, _a, passenger, profile, bookingModel, passengers, month, day, hour, min, sec, milli, ref, book, error_2, ReturnTrip, date, available, Return, isAvailable, amount, profile, payments, bookingModels, _b, _c, roundTrip, bookingModel, month, day, hour, min, sec, milli, ref, passenger, bookings, returnBookingModels, _d, _e, returnPasenger, bookingModel, month, day, hour, min, sec, milli, ref, passenger, returnBookings, bookingModels, profile, payments, _f, _g, passenger, month, day, hour, min, sec, milli, ref, bookingModel, passengers, booking, ReturnTrip, profile, bookingModels, payments, _h, _j, passengers, bookingModel, month, day, hour, min, sec, milli, ref, passenger, booking, ReturnBookingModels, _k, _l, returnPassenger, month, day, hour, min, sec, milli, ref, ReturnBookingModel, returnPassengers, returnBooking;
             return __generator(this, function (_m) {
                 switch (_m.label) {
                     case 0:
@@ -533,10 +557,14 @@ var BookingService = /** @class */ (function () {
                         if (!Authorized) {
                             console.log('hello');
                         }
-                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({ where: [{
-                                        id: bookingData.tripId
-                                    }], relations: ["route"] })
-                                .catch(function () {
+                        return [4 /*yield*/, Trips_1.Trips.findOneOrFail({
+                                where: [
+                                    {
+                                        id: bookingData.tripId,
+                                    },
+                                ],
+                                relations: ['route'],
+                            }).catch(function () {
                                 throw new utils_1.AppError('invalid trip selected');
                             })];
                     case 1:
@@ -547,8 +575,8 @@ var BookingService = /** @class */ (function () {
                             status: 'paid',
                             referenceId: user.id,
                         };
-                        if (!(bookingData.service === 'book_a_seat')) return [3 /*break*/, 28];
-                        if (!(bookingData.type === 'one_way')) return [3 /*break*/, 10];
+                        if (!(bookingData.service === 'book_a_seat')) return [3 /*break*/, 31];
+                        if (!(bookingData.type === 'one_way')) return [3 /*break*/, 13];
                         date = (0, dayjs_1.default)(bookingData.travelDate).format('dddd').toLowerCase();
                         available = trip.Days.includes(date);
                         if (!available) {
@@ -557,18 +585,18 @@ var BookingService = /** @class */ (function () {
                         return [4 /*yield*/, this.verifySeat(trip.id, bookingData.seat, bookingData.numberOfTravellers, bookingData.travelDate)];
                     case 2:
                         _m.sent();
-                        return [4 /*yield*/, Profile_1.Profile.create(bookingData.profile).save()];
-                    case 3:
-                        profile = _m.sent();
                         return [4 /*yield*/, Payment_1.Payments.create(payment).save()];
-                    case 4:
+                    case 3:
                         payments = _m.sent();
                         bookingModels = [];
                         _i = 0, _a = bookingData.passenger;
-                        _m.label = 5;
-                    case 5:
+                        _m.label = 4;
+                    case 4:
                         if (!(_i < _a.length)) return [3 /*break*/, 8];
                         passenger = _a[_i];
+                        return [4 /*yield*/, Profile_1.Profile.create(bookingData.profile).save()];
+                    case 5:
+                        profile = _m.sent();
                         bookingModel = bookingModel_1.Bookings.create(bookingData);
                         passengers = Passenger_1.Passengers.create(passenger);
                         month = (0, dayjs_1.default)(new Date()).format('MMM').charAt(0).toUpperCase();
@@ -589,7 +617,7 @@ var BookingService = /** @class */ (function () {
                         bookingModel.seat = passenger.seat;
                         bookingModel.ArrivalTerminal = trip.route.route;
                         bookingModel.DepartureTerminal = trip.route.Terminal;
-                        bookingModel.amount = trip.price;
+                        bookingModel.amount = bookingData.amount;
                         bookingModel.payment = payments;
                         bookingModel.passengerId = passengers;
                         (bookingModel.paymentType = bookingData.paymentType),
@@ -606,13 +634,23 @@ var BookingService = /** @class */ (function () {
                         _m.label = 7;
                     case 7:
                         _i++;
-                        return [3 /*break*/, 5];
-                    case 8: return [4 /*yield*/, bookingModel_1.Bookings.save(bookingModels)];
+                        return [3 /*break*/, 4];
+                    case 8:
+                        console.log(bookingModels);
+                        _m.label = 9;
                     case 9:
+                        _m.trys.push([9, 11, , 12]);
+                        return [4 /*yield*/, bookingModel_1.Bookings.save(bookingModels)];
+                    case 10:
                         book = _m.sent();
                         return [2 /*return*/, book];
-                    case 10:
-                        if (!(bookingData.type === 'round_trip')) return [3 /*break*/, 26];
+                    case 11:
+                        error_2 = _m.sent();
+                        console.log(error_2);
+                        return [3 /*break*/, 12];
+                    case 12: return [3 /*break*/, 30];
+                    case 13:
+                        if (!(bookingData.type === 'round_trip')) return [3 /*break*/, 29];
                         if (!bookingData.returnTripId ||
                             !bookingData.ReturnSeat ||
                             !bookingData.returnDate) {
@@ -623,7 +661,7 @@ var BookingService = /** @class */ (function () {
                             }).catch(function () {
                                 throw new utils_1.AppError('invalid return trip');
                             })];
-                    case 11:
+                    case 14:
                         ReturnTrip = _m.sent();
                         date = (0, dayjs_1.default)(bookingData.travelDate).format('dddd').toLowerCase();
                         available = trip.Days.includes(date);
@@ -639,23 +677,23 @@ var BookingService = /** @class */ (function () {
                         }
                         amount = Number(bookingData.amount / bookingData.numberOfTravellers);
                         return [4 /*yield*/, this.verifySeat(trip.id, bookingData.seat, bookingData.numberOfTravellers, bookingData.travelDate)];
-                    case 12:
+                    case 15:
                         _m.sent();
                         return [4 /*yield*/, this.verifySeat(ReturnTrip.id, bookingData.ReturnSeat, bookingData.numberOfTravellers, bookingData.returnDate)];
-                    case 13:
+                    case 16:
                         _m.sent();
                         return [4 /*yield*/, Profile_1.Profile.create(bookingData.profile).save()];
-                    case 14:
+                    case 17:
                         profile = _m.sent();
                         return [4 /*yield*/, Payment_1.Payments.create(payment).save()];
-                    case 15:
+                    case 18:
                         payments = _m.sent();
                         console.log(amount);
                         bookingModels = [];
                         _b = 0, _c = bookingData.passenger;
-                        _m.label = 16;
-                    case 16:
-                        if (!(_b < _c.length)) return [3 /*break*/, 19];
+                        _m.label = 19;
+                    case 19:
+                        if (!(_b < _c.length)) return [3 /*break*/, 22];
                         roundTrip = _c[_b];
                         bookingModel = bookingModel_1.Bookings.create(bookingData);
                         month = (0, dayjs_1.default)(new Date()).format('MMM').charAt(0).toUpperCase();
@@ -669,14 +707,14 @@ var BookingService = /** @class */ (function () {
                         passenger.user = user;
                         passenger.profile = profile;
                         return [4 /*yield*/, passenger.save()];
-                    case 17:
+                    case 20:
                         passenger = _m.sent();
                         bookingModel.passengerId = passenger;
                         bookingModel.trip = trip;
                         bookingModel.payment = payments;
                         bookingModel.amount = trip.price;
-                        bookingModel.referenceId = ref,
-                            bookingModel.paymentType = bookingData.paymentType;
+                        (bookingModel.referenceId = ref),
+                            (bookingModel.paymentType = bookingData.paymentType);
                         bookingModel.schedule = trip.schedule;
                         bookingModel.seat = roundTrip.seat;
                         bookingModel.ReturnSeat = roundTrip.ReturnSeat;
@@ -690,18 +728,18 @@ var BookingService = /** @class */ (function () {
                         bookingModel.ConfirmedTravelDate = bookingData.travelDate;
                         bookingModel.ConfirmedTripId = trip.id;
                         bookingModels.push(bookingModel);
-                        _m.label = 18;
-                    case 18:
+                        _m.label = 21;
+                    case 21:
                         _b++;
-                        return [3 /*break*/, 16];
-                    case 19: return [4 /*yield*/, bookingModel_1.Bookings.save(bookingModels)];
-                    case 20:
+                        return [3 /*break*/, 19];
+                    case 22: return [4 /*yield*/, bookingModel_1.Bookings.save(bookingModels)];
+                    case 23:
                         bookings = _m.sent();
                         returnBookingModels = [];
                         _d = 0, _e = bookingData.passenger;
-                        _m.label = 21;
-                    case 21:
-                        if (!(_d < _e.length)) return [3 /*break*/, 24];
+                        _m.label = 24;
+                    case 24:
+                        if (!(_d < _e.length)) return [3 /*break*/, 27];
                         returnPasenger = _e[_d];
                         bookingModel = bookingModel_1.Bookings.create(bookingData);
                         month = (0, dayjs_1.default)(new Date()).format('MMM').charAt(0).toUpperCase();
@@ -715,7 +753,7 @@ var BookingService = /** @class */ (function () {
                         passenger.user = user;
                         passenger.profile = profile;
                         return [4 /*yield*/, passenger.save()];
-                    case 22:
+                    case 25:
                         passenger = _m.sent();
                         bookingModel.passengerId = passenger;
                         bookingModel.trip = ReturnTrip;
@@ -737,30 +775,30 @@ var BookingService = /** @class */ (function () {
                         bookingModel.ConfirmedTravelDate = bookingData.returnDate;
                         bookingModel.ConfirmedTripId = trip.id;
                         returnBookingModels.push(bookingModel);
-                        _m.label = 23;
-                    case 23:
+                        _m.label = 26;
+                    case 26:
                         _d++;
-                        return [3 /*break*/, 21];
-                    case 24: return [4 /*yield*/, bookingModel_1.Bookings.save(returnBookingModels)];
-                    case 25:
+                        return [3 /*break*/, 24];
+                    case 27: return [4 /*yield*/, bookingModel_1.Bookings.save(returnBookingModels)];
+                    case 28:
                         returnBookings = _m.sent();
                         return [2 /*return*/, { bookings: bookings, returnBookings: returnBookings }];
-                    case 26: throw new utils_1.AppError('invalid booking type selected');
-                    case 27: return [3 /*break*/, 53];
-                    case 28:
-                        if (!(bookingData.service === 'hire_service')) return [3 /*break*/, 52];
-                        if (!(bookingData.type === 'one_way')) return [3 /*break*/, 36];
+                    case 29: throw new utils_1.AppError('invalid booking type selected');
+                    case 30: return [3 /*break*/, 56];
+                    case 31:
+                        if (!(bookingData.service === 'hire_service')) return [3 /*break*/, 55];
+                        if (!(bookingData.type === 'one_way')) return [3 /*break*/, 39];
                         bookingModels = [];
                         return [4 /*yield*/, Profile_1.Profile.create(bookingData.profile).save()];
-                    case 29:
+                    case 32:
                         profile = _m.sent();
                         return [4 /*yield*/, Payment_1.Payments.create(payment).save()];
-                    case 30:
+                    case 33:
                         payments = _m.sent();
                         _f = 0, _g = bookingData.passenger;
-                        _m.label = 31;
-                    case 31:
-                        if (!(_f < _g.length)) return [3 /*break*/, 34];
+                        _m.label = 34;
+                    case 34:
+                        if (!(_f < _g.length)) return [3 /*break*/, 37];
                         passenger = _g[_f];
                         month = (0, dayjs_1.default)(new Date()).format('MMM').charAt(0).toUpperCase();
                         day = (0, dayjs_1.default)(new Date()).format('dd').charAt(0).toUpperCase();
@@ -774,7 +812,7 @@ var BookingService = /** @class */ (function () {
                         passengers.profile = profile;
                         passengers.user = user;
                         return [4 /*yield*/, passengers.save()];
-                    case 32:
+                    case 35:
                         _m.sent();
                         bookingModel.trip = trip;
                         bookingModel.passengerId = passengers;
@@ -790,32 +828,32 @@ var BookingService = /** @class */ (function () {
                         bookingModel.ConfirmedTravelDate = bookingData.travelDate;
                         bookingModel.paymentType = bookingData.paymentType;
                         bookingModels.push(bookingModel);
-                        _m.label = 33;
-                    case 33:
+                        _m.label = 36;
+                    case 36:
                         _f++;
-                        return [3 /*break*/, 31];
-                    case 34: return [4 /*yield*/, bookingModel_1.Bookings.save(bookingModels)];
-                    case 35:
+                        return [3 /*break*/, 34];
+                    case 37: return [4 /*yield*/, bookingModel_1.Bookings.save(bookingModels)];
+                    case 38:
                         booking = _m.sent();
                         return [2 /*return*/, booking];
-                    case 36:
-                        if (!(bookingData.type === 'round_trip')) return [3 /*break*/, 50];
+                    case 39:
+                        if (!(bookingData.type === 'round_trip')) return [3 /*break*/, 53];
                         return [4 /*yield*/, Trips_1.Trips.findOneOrFail({
                                 id: bookingData.returnTripId,
                             })];
-                    case 37:
+                    case 40:
                         ReturnTrip = _m.sent();
                         return [4 /*yield*/, Profile_1.Profile.create(bookingData.profile).save()];
-                    case 38:
+                    case 41:
                         profile = _m.sent();
                         bookingModels = [];
                         return [4 /*yield*/, Payment_1.Payments.create(payment).save()];
-                    case 39:
+                    case 42:
                         payments = _m.sent();
                         _h = 0, _j = bookingData.passenger;
-                        _m.label = 40;
-                    case 40:
-                        if (!(_h < _j.length)) return [3 /*break*/, 43];
+                        _m.label = 43;
+                    case 43:
+                        if (!(_h < _j.length)) return [3 /*break*/, 46];
                         passengers = _j[_h];
                         bookingModel = bookingModel_1.Bookings.create(passengers);
                         month = (0, dayjs_1.default)(new Date()).format('MMM').charAt(0).toUpperCase();
@@ -829,7 +867,7 @@ var BookingService = /** @class */ (function () {
                         passenger.user = user;
                         passenger.profile = profile;
                         return [4 /*yield*/, passenger.save()];
-                    case 41:
+                    case 44:
                         _m.sent();
                         bookingModel.payment = payments;
                         bookingModel.referenceId = ref;
@@ -849,18 +887,18 @@ var BookingService = /** @class */ (function () {
                         bookingModel.type = bookingData.type;
                         bookingModel.service = bookingData.service;
                         bookingModels.push(bookingModel);
-                        _m.label = 42;
-                    case 42:
+                        _m.label = 45;
+                    case 45:
                         _h++;
-                        return [3 /*break*/, 40];
-                    case 43: return [4 /*yield*/, bookingModel_1.Bookings.save(bookingModels)];
-                    case 44:
+                        return [3 /*break*/, 43];
+                    case 46: return [4 /*yield*/, bookingModel_1.Bookings.save(bookingModels)];
+                    case 47:
                         booking = _m.sent();
                         ReturnBookingModels = [];
                         _k = 0, _l = bookingData.passenger;
-                        _m.label = 45;
-                    case 45:
-                        if (!(_k < _l.length)) return [3 /*break*/, 48];
+                        _m.label = 48;
+                    case 48:
+                        if (!(_k < _l.length)) return [3 /*break*/, 51];
                         returnPassenger = _l[_k];
                         month = (0, dayjs_1.default)(new Date()).format('MMM').charAt(0).toUpperCase();
                         day = (0, dayjs_1.default)(new Date()).format('dd').charAt(0).toUpperCase();
@@ -874,7 +912,7 @@ var BookingService = /** @class */ (function () {
                         returnPassengers.user = user;
                         returnPassengers.profile = profile;
                         return [4 /*yield*/, returnPassengers.save()];
-                    case 46:
+                    case 49:
                         _m.sent();
                         ReturnBookingModel.passengerId = returnPassengers;
                         ReturnBookingModel.referenceId = ref;
@@ -896,18 +934,18 @@ var BookingService = /** @class */ (function () {
                         ReturnBookingModel.type = bookingData.type;
                         ReturnBookingModels.push(ReturnBookingModel);
                         console.log(returnPassengers);
-                        _m.label = 47;
-                    case 47:
+                        _m.label = 50;
+                    case 50:
                         _k++;
-                        return [3 /*break*/, 45];
-                    case 48: return [4 /*yield*/, bookingModel_1.Bookings.save(ReturnBookingModels)];
-                    case 49:
+                        return [3 /*break*/, 48];
+                    case 51: return [4 /*yield*/, bookingModel_1.Bookings.save(ReturnBookingModels)];
+                    case 52:
                         returnBooking = _m.sent();
                         return [2 /*return*/, { booking: booking, returnBooking: returnBooking }];
-                    case 50: throw new utils_1.AppError('invalid booking type selected');
-                    case 51: return [3 /*break*/, 53];
-                    case 52: throw new utils_1.AppError('invalid booking service selected');
-                    case 53: return [2 /*return*/];
+                    case 53: throw new utils_1.AppError('invalid booking type selected');
+                    case 54: return [3 /*break*/, 56];
+                    case 55: throw new utils_1.AppError('invalid booking service selected');
+                    case 56: return [2 /*return*/];
                 }
             });
         }); };
@@ -970,7 +1008,7 @@ var BookingService = /** @class */ (function () {
                                     {
                                         id: bookingData.vehicleId,
                                         vehicleType: type.id,
-                                        vehicleStatus: enums_1.VehicleStatus.AVAILABLE,
+                                        vehicleStatus: (0, typeorm_plus_2.Not)(enums_1.VehicleStatus.IN_TRANSIT),
                                     },
                                 ],
                             })];
@@ -997,6 +1035,7 @@ var BookingService = /** @class */ (function () {
                                 where: [
                                     {
                                         vehicle: vehicle.id,
+                                        TravelDate: bookingData.travelDate,
                                     },
                                 ],
                             })];
@@ -1298,17 +1337,21 @@ var BookingService = /** @class */ (function () {
                         if (user.block === true) {
                             throw new utils_1.AppError('UnAuthorized', null, 404);
                         }
-                        authorize = user.priviledges.includes("manager");
+                        authorize = user.priviledges.includes('manager');
                         if (!authorize) {
                             throw new utils_1.AppError('UnAuthorized', null, 404);
                         }
                         console.log(bookingData);
-                        return [4 /*yield*/, bookingModel_1.Bookings.findOneOrFail({ where: [{
+                        return [4 /*yield*/, bookingModel_1.Bookings.findOneOrFail({
+                                where: [
+                                    {
                                         referenceId: bookingData.id,
                                         vehicle: null,
-                                        bookingStatus: enums_1.BookingStatus.APPROVED
-                                    }] }).catch(function () {
-                                throw new utils_1.AppError("Invalid data");
+                                        bookingStatus: enums_1.BookingStatus.APPROVED,
+                                    },
+                                ],
+                            }).catch(function () {
+                                throw new utils_1.AppError('Invalid data');
                             })];
                     case 1:
                         booking = _a.sent();
@@ -1316,7 +1359,7 @@ var BookingService = /** @class */ (function () {
                         return [4 /*yield*/, booking.save()];
                     case 2:
                         _a.sent();
-                        return [2 /*return*/, "Passenger status changed to delay"
+                        return [2 /*return*/, 'Passenger status changed to delay'
                             // booking.bookingStatus = BookingStatus.DELAY;
                             // await booking.save();
                             // return 'status updated';
@@ -1325,12 +1368,18 @@ var BookingService = /** @class */ (function () {
             });
         }); };
         this.changePassengerStatus = function (bookingData) { return __awaiter(_this, void 0, void 0, function () {
-            var updates, isAllowed, isMatch, booking_2, error_2;
+            var updates, isAllowed, isMatch, booking_2, error_3;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         updates = Object.keys(bookingData);
-                        isAllowed = ['trip', 'schedule', 'ConfirmedTravelDate', "referenceId", "bookingStatus"];
+                        isAllowed = [
+                            'trip',
+                            'schedule',
+                            'ConfirmedTravelDate',
+                            'referenceId',
+                            'bookingStatus',
+                        ];
                         isMatch = updates.every(function (item) { return isAllowed.includes(item); });
                         if (!isMatch) {
                             throw new utils_1.AppError('invalid update');
@@ -1338,16 +1387,24 @@ var BookingService = /** @class */ (function () {
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 4, , 5]);
-                        return [4 /*yield*/, bookingModel_1.Bookings.findOneOrFail({ where: [{ referenceId: bookingData.referenceId,
-                                        bookingStatus: enums_1.BookingStatus.DELAY }] }).catch(function () { throw new utils_1.AppError("no referenceId match this search"); })];
+                        return [4 /*yield*/, bookingModel_1.Bookings.findOneOrFail({
+                                where: [
+                                    {
+                                        referenceId: bookingData.referenceId,
+                                        bookingStatus: enums_1.BookingStatus.DELAY,
+                                    },
+                                ],
+                            }).catch(function () {
+                                throw new utils_1.AppError('no referenceId match this search');
+                            })];
                     case 2:
                         booking_2 = _a.sent();
-                        updates.forEach(function (item) { return booking_2[item] = bookingData[item]; });
+                        updates.forEach(function (item) { return (booking_2[item] = bookingData[item]); });
                         return [4 /*yield*/, booking_2.save()];
                     case 3: return [2 /*return*/, _a.sent()];
                     case 4:
-                        error_2 = _a.sent();
-                        throw new utils_1.AppError(error_2);
+                        error_3 = _a.sent();
+                        throw new utils_1.AppError(error_3);
                     case 5: return [2 /*return*/];
                 }
             });
@@ -1358,7 +1415,7 @@ var BookingService = /** @class */ (function () {
             });
         }); };
         this.OneWayRounTrip = function (trip, passenger, ref, user) { return __awaiter(_this, void 0, void 0, function () {
-            var price, paymentService, verifyPaymentResponse, paymentData, amount, PaymentModel, error_3;
+            var price, paymentService, verifyPaymentResponse, paymentData, amount, PaymentModel, error_4;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -1388,39 +1445,43 @@ var BookingService = /** @class */ (function () {
                         }
                         return [3 /*break*/, 3];
                     case 2:
-                        error_3 = _a.sent();
-                        console.log(error_3);
+                        error_4 = _a.sent();
+                        console.log(error_4);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
             });
         }); };
         this.SearchBooking = function (bookingData, user) { return __awaiter(_this, void 0, void 0, function () {
-            var isValid, search, error_4;
+            var isValid, search, error_5;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         if (user.block) {
-                            throw new utils_1.AppError("UnAuthorized");
+                            throw new utils_1.AppError('UnAuthorized');
                         }
-                        isValid = user.priviledges.includes("customer");
+                        isValid = user.priviledges.includes('customer');
                         if (isValid) {
-                            throw new utils_1.AppError("UnAuthorized");
+                            throw new utils_1.AppError('UnAuthorized');
                         }
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, bookingModel_1.Bookings.find({ where: [{
+                        return [4 /*yield*/, bookingModel_1.Bookings.find({
+                                where: [
+                                    {
                                         DepartureTerminal: bookingData.departureTerminal,
                                         ArrivalTerminal: bookingData.arrivalTerminal,
-                                        TravelDate: bookingData.travelDate
-                                    }], })];
+                                        TravelDate: bookingData.travelDate,
+                                    },
+                                ],
+                            })];
                     case 2:
                         search = _a.sent();
                         return [2 /*return*/, search];
                     case 3:
-                        error_4 = _a.sent();
-                        throw new utils_1.AppError("No booking was done on this travel date");
+                        error_5 = _a.sent();
+                        throw new utils_1.AppError('No booking was done on this travel date');
                     case 4: return [2 /*return*/];
                 }
             });
@@ -1431,14 +1492,16 @@ var BookingService = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         if (user.block) {
-                            throw new utils_1.AppError("UnAuthorized");
+                            throw new utils_1.AppError('UnAuthorized');
                         }
-                        isValid = user.priviledges.includes("customer");
+                        isValid = user.priviledges.includes('customer');
                         if (isValid) {
-                            throw new utils_1.AppError("UnAuthorized");
+                            throw new utils_1.AppError('UnAuthorized');
                         }
-                        return [4 /*yield*/, bookingModel_1.Bookings.findOneOrFail({ where: [{ referenceId: reference.id }] }).catch(function () {
-                                throw new utils_1.AppError("Invalid reference Number");
+                        return [4 /*yield*/, bookingModel_1.Bookings.findOneOrFail({
+                                where: [{ referenceId: reference.id }],
+                            }).catch(function () {
+                                throw new utils_1.AppError('Invalid reference Number');
                             })];
                     case 1:
                         ref = _a.sent();
@@ -1447,37 +1510,40 @@ var BookingService = /** @class */ (function () {
             });
         }); };
         this.PrintManifest = function (manifest, user) { return __awaiter(_this, void 0, void 0, function () {
-            var print, vehicle, error_5;
+            var print, vehicle, error_6;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         if (user.block) {
-                            throw new utils_1.AppError("UnAuthorized", null, 404);
+                            throw new utils_1.AppError('UnAuthorized', null, 404);
                         }
-                        if (user.priviledges.includes("customer")) {
-                            throw new utils_1.AppError("UnAuthorized", null, 404);
+                        if (user.priviledges.includes('customer')) {
+                            throw new utils_1.AppError('UnAuthorized', null, 404);
                         }
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 6, , 7]);
-                        return [4 /*yield*/, bookingModel_1.Bookings.find({ where: [{
+                        return [4 /*yield*/, bookingModel_1.Bookings.find({
+                                where: [
+                                    {
                                         vehicle: manifest.vehicleId,
                                         schedule: manifest.schedule,
                                         TravelDate: manifest.travelDate,
-                                    }] })];
+                                    },
+                                ],
+                            })];
                     case 2:
                         print = _a.sent();
-                        console.log(print, print.length);
                         if (!(print.length !== 0)) return [3 /*break*/, 4];
                         return [4 /*yield*/, vehicle_1.Vehicles.findOne({ id: manifest.vehicleId })];
                     case 3:
                         vehicle = _a.sent();
                         return [2 /*return*/, { print: print, vehicle: vehicle }];
-                    case 4: throw new utils_1.AppError("invalid data");
+                    case 4: throw new utils_1.AppError('invalid data');
                     case 5: return [3 /*break*/, 7];
                     case 6:
-                        error_5 = _a.sent();
-                        throw new utils_1.AppError("invalid data");
+                        error_6 = _a.sent();
+                        throw new utils_1.AppError('invalid data');
                     case 7: return [2 /*return*/];
                 }
             });

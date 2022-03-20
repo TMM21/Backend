@@ -103,7 +103,9 @@ export class BookingService {
           bookingModel.type = bookingData.type
           bookingModel.numberOfTravellers = 1
           bookingModel.referenceId = ref
-          bookingModel.TravelDate = bookingData.travelDate
+          bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+            'YYYY-MM-DD',
+          )
           bookingModel.ConfirmedTravelDate = bookingData.travelDate
           bookingModel.ConfirmedTripId = trip.id
           bookingModel.pickupLocation = bookingData.pickupLocation
@@ -212,7 +214,9 @@ export class BookingService {
           bookingModel.ConfirmedReturnTripId = bookingData.returnTripId
           bookingModel.numberOfTravellers = 1
           bookingModel.referenceId = refe
-          bookingModel.TravelDate = bookingData.travelDate
+          bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+            'YYYY-MM-DD',
+          )
           bookingModel.ConfirmedTravelDate = bookingData.travelDate
           bookingModel.ConfirmedTripId = trip.id
 
@@ -251,7 +255,9 @@ export class BookingService {
           bookingModel.numberOfTravellers = 1
           bookingModel.ConfirmedReturnDate = bookingData.returnDate
           bookingModel.referenceId = ref
-          bookingModel.TravelDate = bookingData.travelDate
+          bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+            'YYYY-MM-DD',
+          )
           bookingModel.ReturnDate = bookingData.returnDate
           bookingModel.ConfirmedTravelDate = bookingData.returnDate
           bookingModel.ConfirmedTripId = trip.id
@@ -290,7 +296,9 @@ export class BookingService {
           bookingModel.trip = trip
           bookingModel.passengerId = passengers
           bookingModel.referenceId = bookingData.referenceId
-          bookingModel.TravelDate = bookingData.travelDate
+          bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+            'YYYY-MM-DD',
+          )
           bookingModel.schedule = trip.schedule
           ;(bookingModel.DepartureTerminal = trip.route.Terminal),
             (bookingModel.ArrivalTerminal = trip.route.route)
@@ -359,8 +367,12 @@ export class BookingService {
           bookingModel.amount = trip.price
           ;(bookingModel.DepartureTerminal = trip.route.Terminal),
             (bookingModel.ArrivalTerminal = trip.route.route),
-            (bookingModel.TravelDate = bookingData.travelDate)
-          bookingModel.ConfirmedTravelDate = bookingData.travelDate
+            (bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+              'YYYY-MM-DD',
+            ))
+          bookingModel.ConfirmedTravelDate = dayjs(
+            bookingData.travelDate,
+          ).format('YYYY-MM-DD')
           bookingModel.ReturnDate = bookingData.returnDate
           bookingModel.schedule = trip.schedule
           bookingModel.ConfirmedReturnDate = bookingData.returnDate
@@ -502,6 +514,7 @@ export class BookingService {
         const payments = await Payments.create(payment).save()
 
         const bookingModels: Bookings[] = []
+        console.log(bookingData.travelDate)
 
         for (const passenger of bookingData.passenger) {
           let profile = await Profile.create(bookingData.profile).save()
@@ -534,7 +547,9 @@ export class BookingService {
           bookingModel.numberOfTravellers = 1
           bookingModel.referenceId = ref
 
-          bookingModel.TravelDate = bookingData.travelDate
+          bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+            'YYYY-MM-DD',
+          )
           bookingModel.ConfirmedTravelDate = bookingData.travelDate
           bookingModel.ConfirmedTripId = trip.id
           bookingModel.pickupLocation = bookingData.pickupLocation
@@ -627,7 +642,9 @@ export class BookingService {
           bookingModel.ConfirmedReturnDate = bookingData.returnDate
           bookingModel.ConfirmedReturnTripId = bookingData.returnTripId
           bookingModel.numberOfTravellers = 1
-          bookingModel.TravelDate = bookingData.travelDate
+          bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+            'YYYY-MM-DD',
+          )
           bookingModel.ConfirmedTravelDate = bookingData.travelDate
           bookingModel.ConfirmedTripId = trip.id
 
@@ -664,7 +681,9 @@ export class BookingService {
           bookingModel.numberOfTravellers = 1
           bookingModel.ConfirmedReturnDate = bookingData.returnDate
           bookingModel.referenceId = ref
-          bookingModel.TravelDate = bookingData.travelDate
+          bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+            'YYYY-MM-DD',
+          )
           bookingModel.ReturnDate = bookingData.returnDate
           bookingModel.ConfirmedTravelDate = bookingData.returnDate
           bookingModel.ConfirmedTripId = trip.id
@@ -702,7 +721,9 @@ export class BookingService {
           bookingModel.trip = trip
           bookingModel.passengerId = passengers
           bookingModel.referenceId = ref
-          bookingModel.TravelDate = bookingData.travelDate
+          bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+            'YYYY-MM-DD',
+          )
           ;(bookingModel.schedule = trip.schedule),
             (bookingModel.payment = payments)
           bookingModel.amount = trip.price
@@ -749,7 +770,9 @@ export class BookingService {
           bookingModel.ReturnTripId = ReturnTrip.id
           bookingModel.ConfirmedReturnTripId = ReturnTrip.id
           bookingModel.amount = trip.price
-          bookingModel.TravelDate = bookingData.travelDate
+          bookingModel.TravelDate = dayjs(bookingData.travelDate).format(
+            'YYYY-MM-DD',
+          )
           bookingModel.ConfirmedTravelDate = bookingData.travelDate
           bookingModel.ReturnDate = bookingData.returnDate
           bookingModel.schedule = trip.schedule
@@ -814,7 +837,9 @@ export class BookingService {
   //Assigning Bus to passengers
 
   public assignus = async (bookingData: AssignBus, user: Users) => {
-    if (!user.priviledges.includes('manager')) {
+    const authorize = user.priviledges.includes('manager')
+
+    if (!authorize) {
       throw new AppError('UnAuthorized', null, 404)
     }
     if (user.block) {
@@ -843,6 +868,7 @@ export class BookingService {
     }).catch(() => {
       throw new AppError('invalid route selected')
     })
+    console.log(user.Terminal, route.terminal.id)
     if (user.Terminal !== route.terminal.id) {
       throw new AppError('UnAuthorized', null, 404)
     }
@@ -957,7 +983,7 @@ export class BookingService {
     const route = await Routes.findOneOrFail({
       where: [
         {
-          route: transitData.route,
+          id: transitData.route,
           terminal: user.Terminal,
         },
       ],
@@ -965,7 +991,6 @@ export class BookingService {
     }).catch(() => {
       throw new AppError('invalid route selected')
     })
-    console.log(route)
 
     // console.log(route.terminal, user.Terminal)
     if (user.Terminal !== route.terminal.id) {
@@ -992,6 +1017,7 @@ export class BookingService {
         },
       ],
     })
+
     if (booking === undefined) {
       throw new AppError(
         'no booking has been done on this trip and on this day',
@@ -1006,6 +1032,7 @@ export class BookingService {
       throw new AppError('invalid vehicle selected')
     })
     vehicle.vehicleStatus = VehicleStatus.IN_TRANSIT
+    console.log(vehicle)
 
     const captainFee = new CapTainService()
     await captainFee.createCaptainFee(trip, vehicle, transitData, route)
@@ -1040,6 +1067,8 @@ export class BookingService {
       throw new AppError('UnAuthorized', null, 404)
     }
 
+    console.log(bookingData)
+
     const booking = await Bookings.find({
       where: [
         {
@@ -1049,6 +1078,7 @@ export class BookingService {
           trip: bookingData.tripId,
           service: bookingData.service,
           type: bookingData.type,
+          DepartureTerminal: bookingData.DepartureTerminal,
         },
       ],
       relations: ['passengerId'],
@@ -1109,36 +1139,39 @@ export class BookingService {
       throw new AppError('UnAuthorized', null, 404)
     }
 
-    const route = await Routes.findOneOrFail({
-      where: [{ id: status.routeId }],
-      relations: ['terminal'],
-    }).catch(() => {
-      throw new AppError('invalid route selected')
-    })
-
-    let vehicle = await Vehicles.findOne({
-      where: [
-        {
-          id: status.id,
-        },
-      ],
-    })
-    if (!vehicle) {
-      throw new AppError('invalid vehicle selected')
+    try {
+      const route = await Routes.findOneOrFail({
+        where: [{ id: status.routeId }],
+        relations: ['terminal'],
+      }).catch(() => {
+        throw new AppError('invalid route selected')
+      })
+      console.log(route)
+      let vehicle = await Vehicles.findOne({
+        where: [
+          {
+            id: status.id,
+          },
+        ],
+      })
+      if (!vehicle) {
+        throw new AppError('invalid vehicle selected')
+      }
+      vehicle.vehicleStatus = status.status
+      const location = new VehicleServiceLocation()
+      const info = {
+        location: route.route,
+        headingTo: route.route,
+        left: route.Terminal,
+        status: status.status,
+        vehicle: vehicle,
+      }
+      await location.CreateVehicleLocation(info)
+      await vehicle.save()
+      return 'vehicle updated'
+    } catch (error) {
+      throw new AppError(error)
     }
-
-    vehicle.vehicleStatus = status.status
-    const location = new VehicleServiceLocation()
-    const info = {
-      location: route.route,
-      headingTo: route.route,
-      left: route.Terminal,
-      status: status.status,
-      vehicle: vehicle,
-    }
-    await location.CreateVehicleLocation(info)
-    await vehicle.save()
-    return 'vehicle updated'
   }
 
   private async verifyPayment(trip, ref, numberOfTraveller, user: Users) {
@@ -1295,6 +1328,8 @@ export class BookingService {
       throw new AppError('UnAuthorized')
     }
     try {
+      console.log(bookingData)
+
       const search = await Bookings.find({
         where: [
           {
@@ -1304,9 +1339,10 @@ export class BookingService {
           },
         ],
       })
+
       return search
     } catch (error) {
-      throw new AppError('No booking was done on this travel date')
+      throw new AppError(error)
     }
   }
 
@@ -1346,6 +1382,8 @@ export class BookingService {
 
       if (print.length !== 0) {
         const vehicle = await Vehicles.findOne({ id: manifest.vehicleId })
+
+        console.log(print, vehicle)
         return { print, vehicle }
       } else {
         throw new AppError('invalid data')

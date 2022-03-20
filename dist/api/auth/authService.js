@@ -59,7 +59,7 @@ var AuthService = /** @class */ (function () {
                 switch (_c.label) {
                     case 0:
                         //check if role is customer
-                        if (customer.role !== "customer") {
+                        if (customer.role !== 'customer') {
                             throw new utils_1.AppError('UnAuthorized', null, 404);
                         }
                         _a = this.parsePhoneNumber(customer.phoneNumber), parsedPhoneNumber = _a.parsedPhoneNumber, isValidPhoneNumber = _a.isValidPhoneNumber;
@@ -78,23 +78,27 @@ var AuthService = /** @class */ (function () {
                         if (email) {
                             throw new utils_1.AppError("A user with this email ".concat(customer.email, " already exists "));
                         }
-                        return [4 /*yield*/, Role_1.Roles.findOneOrFail({ where: [{ role: customer.role }] })
-                                .catch(function () {
+                        return [4 /*yield*/, Role_1.Roles.findOneOrFail({
+                                where: [{ role: customer.role }],
+                            }).catch(function () {
                                 throw new utils_1.AppError('invalid role selected');
                             })];
                     case 3:
                         role = _c.sent();
-                        return [4 /*yield*/, Priviledge_1.Priviledge.findOne({ where: [{ name: role.role }] })];
+                        return [4 /*yield*/, Priviledge_1.Priviledge.findOne({
+                                where: [{ name: role.role }],
+                            })];
                     case 4:
                         expriviledge = _c.sent();
                         if (!expriviledge) {
                             throw new utils_1.AppError('invalid priviledge selected');
                         }
-                        customer.phoneNumber = parsedPhoneNumber;
+                        ;
+                        (customer.phoneNumber = parsedPhoneNumber);
                         _b = customer;
                         return [4 /*yield*/, bcrypt_1.default.hash(customer.password, 8)];
                     case 5:
-                        _b.password = _c.sent();
+                        (_b.password = _c.sent());
                         user = User_1.Users.create(customer);
                         user.priviledge = expriviledge;
                         user.roles = role;
@@ -126,9 +130,10 @@ var AuthService = /** @class */ (function () {
                         if (!isValidPhoneNumber) {
                             throw new utils_1.AppError('invalid phone Number');
                         }
-                        return [4 /*yield*/, User_1.Users.findOne({ where: [{ phoneNumber: parsedPhoneNumber }],
-                                select: ["id", "email", "password", "priviledges", "phoneNumber", "name"],
-                                relations: ["roles", "priviledge"]
+                        return [4 /*yield*/, User_1.Users.findOne({
+                                where: [{ phoneNumber: parsedPhoneNumber }],
+                                select: ['id', 'email', 'password', 'priviledges', 'phoneNumber', 'name'],
+                                relations: ['roles', 'priviledge'],
                             })];
                     case 1:
                         user = _b.sent();
@@ -144,7 +149,7 @@ var AuthService = /** @class */ (function () {
                         if (!isMatch) {
                             throw new utils_1.AppError('no user with this credential exist');
                         }
-                        delete (user.password);
+                        delete user.password;
                         return [4 /*yield*/, this.generateRefreshToken(user)];
                     case 3:
                         refreshToken = _b.sent();
@@ -160,7 +165,7 @@ var AuthService = /** @class */ (function () {
             return __generator(this, function (_c) {
                 switch (_c.label) {
                     case 0:
-                        if (addUser.role === "customer") {
+                        if (addUser.role === 'customer') {
                             throw new utils_1.AppError('UnAuthorized', null, 404);
                         }
                         if (addUser.terminal === null) {
@@ -170,13 +175,16 @@ var AuthService = /** @class */ (function () {
                         if (!isValidPhoneNumber) {
                             throw new utils_1.AppError('invalid phone Number');
                         }
-                        return [4 /*yield*/, Terminal_1.Terminals.findOneOrFail({ where: [{ id: addUser.terminal }] })
-                                .catch(function () {
+                        return [4 /*yield*/, Terminal_1.Terminals.findOneOrFail({
+                                where: [{ id: addUser.terminal }],
+                            }).catch(function () {
                                 throw new utils_1.AppError('invalid terminal');
                             })];
                     case 1:
                         terminal = _c.sent();
-                        return [4 /*yield*/, User_1.Users.findOne({ where: [{ phoneNumber: parsedPhoneNumber }] })];
+                        return [4 /*yield*/, User_1.Users.findOne({
+                                where: [{ phoneNumber: parsedPhoneNumber }],
+                            })];
                     case 2:
                         phone = _c.sent();
                         if (phone) {
@@ -188,8 +196,9 @@ var AuthService = /** @class */ (function () {
                         if (email) {
                             throw new utils_1.AppError("A user with this email ".concat(addUser.email, " already exists"));
                         }
-                        return [4 /*yield*/, Role_1.Roles.findOneOrFail({ where: [{ role: addUser.role }] })
-                                .catch(function () {
+                        return [4 /*yield*/, Role_1.Roles.findOneOrFail({
+                                where: [{ role: addUser.role }],
+                            }).catch(function () {
                                 throw new utils_1.AppError('invalid role selected');
                             })];
                     case 4:
@@ -202,9 +211,14 @@ var AuthService = /** @class */ (function () {
                     case 5:
                         //hash password
                         _b.password = _c.sent();
-                        return [4 /*yield*/, Priviledge_1.Priviledge.findOne({ where: [{ name: role.role }] })];
+                        return [4 /*yield*/, Priviledge_1.Priviledge.findOne({
+                                where: [{ name: role.role }],
+                            })];
                     case 6:
                         priviledge = _c.sent();
+                        if (priviledge === undefined) {
+                            throw new utils_1.AppError('Invalid priviledge selected');
+                        }
                         user = User_1.Users.create(addUser);
                         user.Terminal = terminal.id;
                         user.priviledge = priviledge;
@@ -230,9 +244,18 @@ var AuthService = /** @class */ (function () {
                         if (!isValidPhoneNumber) {
                             throw new utils_1.AppError('invalid phone Number');
                         }
-                        return [4 /*yield*/, User_1.Users.findOne({ where: [{ phoneNumber: parsedPhoneNumber }],
-                                select: ["id", "name", "password", "phoneNumber", "priviledge", "Terminal", "priviledges"],
-                                relations: ["roles", "priviledge"]
+                        return [4 /*yield*/, User_1.Users.findOne({
+                                where: [{ phoneNumber: parsedPhoneNumber }],
+                                select: [
+                                    'id',
+                                    'name',
+                                    'password',
+                                    'phoneNumber',
+                                    'priviledge',
+                                    'Terminal',
+                                    'priviledges',
+                                ],
+                                relations: ['roles', 'priviledge'],
                             })];
                     case 1:
                         user = _b.sent();
@@ -248,10 +271,10 @@ var AuthService = /** @class */ (function () {
                         if (!isMatch) {
                             throw new utils_1.AppError('no user with this credential exists');
                         }
-                        if (user.roles.role === "customer") {
+                        if (user.roles.role === 'customer') {
                             throw new utils_1.AppError('UnAuthorized', null, 404);
                         }
-                        delete (user.password);
+                        delete user.password;
                         console.log(user);
                         return [4 /*yield*/, this.generateRefreshToken(user)];
                     case 3:
@@ -267,14 +290,15 @@ var AuthService = /** @class */ (function () {
             var user, _loop_1, _i, _a, priviledge;
             return __generator(this, function (_b) {
                 switch (_b.label) {
-                    case 0: return [4 /*yield*/, User_1.Users.findOneOrFail({ where: [{ id: id }] })
-                            .catch(function () {
+                    case 0: return [4 /*yield*/, User_1.Users.findOneOrFail({ where: [{ id: id }] }).catch(function () {
                             throw new utils_1.AppError('user not found');
                         })];
                     case 1:
                         user = _b.sent();
                         _loop_1 = function (priviledge) {
-                            var isMatch = user.priviledges.every(function (item) { return priviledge.includes(item); });
+                            var isMatch = user.priviledges.every(function (item) {
+                                return priviledge.includes(item);
+                            });
                             if (!isMatch) {
                                 user.priviledges.push(priviledge);
                             }
@@ -286,7 +310,7 @@ var AuthService = /** @class */ (function () {
                         return [4 /*yield*/, user.save()];
                     case 2:
                         _b.sent();
-                        return [2 /*return*/, "updated successfully"];
+                        return [2 /*return*/, 'updated successfully'];
                 }
             });
         }); };
@@ -294,8 +318,7 @@ var AuthService = /** @class */ (function () {
             var user, _loop_2, _i, _a, priviledge;
             return __generator(this, function (_b) {
                 switch (_b.label) {
-                    case 0: return [4 /*yield*/, User_1.Users.findOneOrFail({ where: [{ id: id }] })
-                            .catch(function () {
+                    case 0: return [4 /*yield*/, User_1.Users.findOneOrFail({ where: [{ id: id }] }).catch(function () {
                             throw new utils_1.AppError('user not found');
                         })];
                     case 1:
@@ -316,7 +339,7 @@ var AuthService = /** @class */ (function () {
                         return [4 /*yield*/, user.save()];
                     case 2:
                         _b.sent();
-                        return [2 /*return*/, "updated successfully"];
+                        return [2 /*return*/, 'updated successfully'];
                 }
             });
         }); };
@@ -324,7 +347,7 @@ var AuthService = /** @class */ (function () {
             var body, token;
             return __generator(this, function (_a) {
                 body = { id: user.id };
-                token = jsonwebtoken_1.default.sign({ iss: "http://localhost:3000", user: body }, "AIzaSyDnN72_PIUPd6mHgVQv2GuhpLn4wot3ke4", {
+                token = jsonwebtoken_1.default.sign({ iss: 'http://localhost:3000', user: body }, 'AIzaSyDnN72_PIUPd6mHgVQv2GuhpLn4wot3ke4', {
                     expiresIn: '1d',
                 });
                 return [2 /*return*/, token];
@@ -336,14 +359,14 @@ var AuthService = /** @class */ (function () {
         var googlePhoneNumber;
         var parsedPhoneNumber;
         try {
-            googlePhoneNumber = phoneNumberUtilInstance.parse(phoneNumber.toString(), "NG");
+            googlePhoneNumber = phoneNumberUtilInstance.parse(phoneNumber.toString(), 'NG');
             parsedPhoneNumber = phoneNumberUtilInstance.format(googlePhoneNumber, google_libphonenumber_1.PhoneNumberFormat.E164);
         }
         catch (error) {
             /* Handle errors thrown by phoneNumber parsing */
             throw new utils_1.AppError(error.message);
         }
-        var isValidPhoneNumber = phoneNumberUtilInstance.isValidNumberForRegion(googlePhoneNumber, "NG");
+        var isValidPhoneNumber = phoneNumberUtilInstance.isValidNumberForRegion(googlePhoneNumber, 'NG');
         return { isValidPhoneNumber: isValidPhoneNumber, parsedPhoneNumber: parsedPhoneNumber };
     };
     AuthService.prototype.generateRefreshToken = function (user) {
