@@ -11603,3 +11603,5 @@ TSError: ⨯ Unable to compile TypeScript:
     at Function.Module._load (node:internal/modules/cjs/loader:822:12)
     at Module.require (node:internal/modules/cjs/loader:1005:19)
 2022-03-20T09:05:44.306Z [info]: server is listening on 4000
+2022-03-20T09:05:57.687Z [info]: Database connection was succesful
+2022-03-20T20:57:11.661Z [info]: server is listening on 4000

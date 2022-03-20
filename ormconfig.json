@@ -7,8 +7,8 @@
   "database": "bjvzhq0wv5ffjkvece29",
   "logging": false,
   "synchronize": false,
-  "entities": ["**/api/**/*Model.ts"],
-  "migrations": ["src/migration/*.ts"],
+  "entities": ["**/api/**/*Model.js"],
+  "migrations": ["src/migration/*.js"],
   "cli": {
     "migrationsDir": "src/migration"
   }
